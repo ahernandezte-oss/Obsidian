@@ -1,11 +1,11 @@
 # 📘 CHEATSHEET — PROBABILIDAD · 28/10/2026
 
 > **🧾 FICHA DEL ARCHIVO**
-> - **Archivo:** `PROBABILIDAD281026.md`
+> - **Archivo:** `MODELOS_CONTINUOS-281026.md`
 > - **Fecha de transcripción:** 28/10/2026 (`DDMMAA` = `281026`)
-> - **Tema:** Modelos continuos — Poisson · Uniforme continua · Gamma (Erlang, Ji-cuadrado, Exponencial)
+> - **Tema principal:** MODELOS CONTINUOS — Poisson · Uniforme continua · Gamma (Erlang, Ji-cuadrado, Exponencial)
 > - **Fuente:** transcripción de clase. Complementos marcados con `➕`.
-> - **Cómo citarla al resolver ejercicios:** «📘 Cheatsheet `PROBABILIDAD281026` §2.D» (el § y la letra identifican el bloque exacto).
+> - **Cómo citarla al resolver ejercicios:** «📘 Cheatsheet `MODELOS_CONTINUOS-281026` §2.D» (el § y la letra identifican el bloque exacto).
 
 ---
 
@@ -21,17 +21,18 @@
 3. **Paso 2 — ¿Qué unidades tienen el dato y la pregunta?** Si no coinciden, reajustar $\lambda$ **antes** de calcular.
 4. **Paso 3 — ¿La pregunta es "de cola"?** ("más de", "al menos", "por lo menos") → complemento de la FDA.
 
-**Tabla de decisión (frase del enunciado → modelo):**
+**Tabla de decisión (frase del enunciado → modelo → bloque donde está la fórmula):**
 
-| Si el enunciado dice…                                                                                         | Modelo                                                 | Fórmula base                                              |
-| ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------ | --------------------------------------------------------- |
-| "número de llegadas / accidentes / nacimientos / defectos en un intervalo"                                    | **Poisson**                                            | $P(X=x)=\frac{e^{-\lambda}\lambda^{x}}{x!}$               |
-| "tiempo de espera hasta que ocurran $r$ eventos"                                                              | **Gamma**                                              | $f(x)=\frac{\lambda^{r}}{\Gamma(r)}x^{r-1}e^{-\lambda x}$ |
-| "tiempo hasta el primer evento" / "tiempo de vida" con tasa constante                                         | **Gamma con $r=1$** = **Exponencial**                  | $f(x)=\lambda e^{-\lambda x}$                             |
-| menciona **"Erlang"**                                                                                         | **Gamma** con $r$ entero positivo                      | $\Gamma(r)=(r-1)!$                                        |
-| menciona **"Ji-cuadrado" / "Chi-cuadrado"**                                                                   | **Gamma** con $\lambda=\frac12$, $r=\frac{k}{2}$       | $E(X)=k$, $V(X)=2k$                                       |
-| "cualquier valor entre $a$ y $b$ con la misma probabilidad" / "elegido al azar en $[a,b]$" / número aleatorio | **Uniforme continua**                                  | $f(x)=\frac{1}{b-a}$                                      |
-| "los eventos ocurren de forma independiente y a tasa constante"                                               | **Poisson** (o **Gamma** si se pregunta por el tiempo) | —                                                         |
+| Si el enunciado dice… | Modelo | Fórmula base | 👉 Ir a |
+|---|---|---|---|
+| "número de llegadas / accidentes / nacimientos / defectos en un intervalo" | **Poisson** | $P(X=x)=\frac{e^{-\lambda}\lambda^{x}}{x!}$ | **§2.A** (+ §4) |
+| "tiempo de espera hasta que ocurran $r$ eventos" | **Gamma** | $f(x)=\frac{\lambda^{r}}{\Gamma(r)}x^{r-1}e^{-\lambda x}$ | **§2.D** (+ §2.C) |
+| "tiempo hasta el primer evento" / "tiempo de vida" con tasa constante | **Gamma con $r=1$** = **Exponencial** | $f(x)=\lambda e^{-\lambda x}$ | **§3 Caso 0** |
+| menciona **"Erlang"** | **Gamma** con $r$ entero positivo | $\Gamma(r)=(r-1)!$ | **§3 Caso 1** |
+| menciona **"Ji-cuadrado" / "Chi-cuadrado"** | **Gamma** con $\lambda=\frac12$, $r=\frac{k}{2}$ | $E(X)=k$, $V(X)=2k$ | **§3 Caso 2** |
+| "cualquier valor entre $a$ y $b$ con la misma probabilidad" / "elegido al azar en $[a,b]$" / número aleatorio | **Uniforme continua** | $f(x)=\frac{1}{b-a}$ | **§2.B** |
+| "los eventos ocurren de forma independiente y a tasa constante" | **Poisson** (o **Gamma** si se pregunta por el tiempo) | — | **§2.A** / **§2.D** |
+| piden $E(X)$, $V(X)$ o momentos por FGM | según el modelo | $E$, $V$, $m_X(t)$ | **§2.A–§2.D** / **§4 Gamma** |
 
 ---
 
@@ -98,7 +99,7 @@ $$
 - **Micro-verificación:** $\Gamma(4)=3!=6$
 
 > **🔤 Diccionario:**
-> - $r$: argumento de la función gamma (positivo) es el r-ésimo evento que se mide en X tiempo.
+> - $r$: argumento de la función gamma (positivo).
 > - $x$: variable de integración (se elimina al integrar).
 > - $\Gamma(r)$: constante normalizadora de la distribución Gamma.
 
