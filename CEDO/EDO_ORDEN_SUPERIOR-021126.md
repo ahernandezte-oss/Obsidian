@@ -26,7 +26,7 @@
 | El polinomio característico es de grado $\geq 3$ y no hay raíz evidente | Ruffini ➕ | división sintética por $(\lambda - r)$ | §2.C · §4.1 paso 2 |
 | Una raíz $\lambda$ se repite $k$ veces | Raíz repetida (Caso 0) | $(C_1 + C_2x + \cdots + C_kx^{k-1})e^{\lambda x}$ | §2.B caso 2 · §3 Caso 0 |
 | Aparecen $\alpha \pm \beta i$ | Complejas conjugadas (Caso 1) | $e^{\alpha x}(C_1\cos\beta x + C_2\sin\beta x)$ | §2.B caso 3 · §3 Caso 1 |
-| La conjetura de $y_p$ ya aparece en $y_h$ | Choque (Caso 2) | multiplicar el bloque por $x$ | §2.E regla del conjunto · §3 Caso 2 |
+| La conjetura de $y_p$ ya aparece en $y_h$ | Choque (Caso 2) | multiplicar el bloque por $x$ | §2.E regla del conjunto · §3 Criterio del choque |
 | Falta el término $y$ o alguna derivada | Factorizar $\lambda$ (Caso 4) | $\lambda = 0$ es raíz → aporta constante | §3 Caso 4 |
 | $g(x)$ trae $\sin(bx)$ o $\cos(bx)$ | Seno y coseno **siempre juntos** (Caso 7) | $A\cos bx + B\sin bx$ | §2.E · §3 Caso 7 |
 
@@ -173,6 +173,41 @@ $$
 
 **🔤 Diccionario:** $u_i$: funciones que reemplazan a las constantes · $W_i$: Wronskiano modificado · $g(x)$: lado derecho ya normalizado · $p(x), q(x)$: coeficientes tras dividir por el término principal.
 
+### G. ➕ Fórmula de operador (evita re-derivar en cada ejercicio)
+
+Para $y = e^{ax}\left(A\cos bx + B\sin bx\right)$ en una EDO $y'' + py' + qy = g(x)$ con $p, q$ constantes:
+
+$$
+y'' + py' + qy = e^{ax}\Big[\left(K_1A + K_2B\right)\cos bx + \left(K_1B - K_2A\right)\sin bx\Big]
+$$
+
+donde
+
+$$
+K_1 = a^2 - b^2 + pa + q, \qquad K_2 = 2ab + pb
+$$
+
+Derivadas sueltas (si se necesitan):
+
+$$
+y' = e^{ax}\Big[\left(aA + bB\right)\cos bx + \left(aB - bA\right)\sin bx\Big]
+$$
+
+$$
+y'' = e^{ax}\Big[\left((a^2-b^2)A + 2abB\right)\cos bx + \left((a^2-b^2)B - 2abA\right)\sin bx\Big]
+$$
+
+**Cómo se usa:** se calculan $K_1$ y $K_2$ **una sola vez** y el sistema de coeficientes sale directo, sin derivar término por término.
+
+**🔤 Diccionario:**
+- $a$: exponente de la exponencial (coeficiente de $x$ en $e^{ax}$).
+- $b$: frecuencia (coeficiente de $x$ en $\cos bx$ y $\sin bx$).
+- $p, q$: coeficientes constantes de $y'$ e $y$ en la EDO (con signo).
+- $K_1, K_2$: **números** que se calculan con la fórmula. No son las constantes $C_1, C_2$ de $y_h$.
+- $A, B$: los coeficientes indeterminados que se despejan.
+
+**Caso exponencial puro** ($b = 0$, $g = Ce^{ax}$, $y_p = Ae^{ax}$): queda $K_1 = a^2 + pa + q$ y $K_2 = 0$, así que $y'' + py' + qy = K_1A\,e^{ax}$.
+
 ---
 
 ## 🔄 3. REGLAS DE ORO Y CASOS ESPECIALES
@@ -193,6 +228,21 @@ $$
 - Si $3 \pm i$ **no** es raíz de la característica, **no** hay choque con la familia $e^{3x}\cos x$, $e^{3x}\sin x$.
 - En coeficientes indeterminados, si tras sustituir los términos con $x$ **no** se cancelan, la corrección por $x$ está mal puesta.
 - Nunca borrar un coeficiente de la conjetura antes de sustituir, aunque "parezca" que da $0$: se resuelve y sale solo.
+
+### Cómo se prueba el choque (criterio explícito) ➕
+
+**Por qué se usa un número complejo:** $y_h$ contiene $e^{ax}\cos bx$ y $e^{ax}\sin bx$ **exactamente cuando** $a + bi$ y $a - bi$ son raíces de la ecuación característica. Por eso el choque se pregunta así: ¿es $a + bi$ raíz de $P(\lambda)$?
+
+| Paso | Qué se hace | Ejemplo con $g(x) = e^{3x}\cos x$ y $P(\lambda) = \lambda^2 - 8\lambda + 20$ |
+|---|---|---|
+| 1 | Leer $a$ y $b$ de la forma de $g(x)$ | $a = 3$ (exponente), $b = 1$ (frecuencia) |
+| 2 | Formar el complejo candidato $\lambda_0 = a + bi$ | $\lambda_0 = 3 + i$ |
+| 3 | Evaluar $P(\lambda_0)$ | $P(3+i) = (3+i)^2 - 8(3+i) + 20 = 4 - 2i$ |
+| 4 | Decidir | $P(3+i) \neq 0$ → **no hay choque** → no se multiplica por $x$ |
+
+**Qué es $P(\lambda_0)$:** es el polinomio característico **evaluado** en el complejo $\lambda_0$. $P$ es una función de $\lambda$; al darle un valor devuelve un número (aquí, complejo). No es una fórmula nueva: es el mismo $P(\lambda) = \lambda^2 - 8\lambda + 20$ de la §2.B.
+
+**Atajo:** $P(3+i) \neq 0$ ya decide por los dos, porque con coeficientes reales $P(3-i) = \overline{P(3+i)} \neq 0$.
 
 ---
 
