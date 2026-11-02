@@ -21,9 +21,9 @@
 | Si el enunciado dice… | Método | Fórmula base | 👉 Ir a |
 |---|---|---|---|
 | $g(x) = 0$ | Homogénea (solo característica) | $a_n\lambda^n + \cdots + a_1\lambda + a_0 = 0$ | §2.B · §4.1 |
-| $g(x)$ es polinomio, $e^{ax}$, $\sin(ax)$, $\cos(ax)$, o producto/suma de estos | Coeficientes indeterminados | $y_p = $ conjetura de la tabla | §2.E · §4.2 |
+| $g(x)$ es polinomio, $e^{ax}$, $\sin(ax)$, $\cos(ax)$, o producto/suma de estos | Coeficientes indeterminados | $y_p$ según la tabla de conjeturas | §2.E · §4.2 |
 | $g(x)$ trae $\tan x$, $\sec x$, $\ln x$, $\sqrt{x}$, $\frac{1}{x}$ | Variación de parámetros | $u_i' = \frac{W_i}{W}$ | §2.F · §4.3 |
-| El polinomio característico es de grado $\geq 3$ y no hay raíz evidente | Ruffini ➕ | división sintética por $( \lambda - r)$ | §2.C · §4.1 paso 2 |
+| El polinomio característico es de grado $\geq 3$ y no hay raíz evidente | Ruffini ➕ | división sintética por $(\lambda - r)$ | §2.C · §4.1 paso 2 |
 | Una raíz $\lambda$ se repite $k$ veces | Raíz repetida (Caso 0) | $(C_1 + C_2x + \cdots + C_kx^{k-1})e^{\lambda x}$ | §2.B caso 2 · §3 Caso 0 |
 | Aparecen $\alpha \pm \beta i$ | Complejas conjugadas (Caso 1) | $e^{\alpha x}(C_1\cos\beta x + C_2\sin\beta x)$ | §2.B caso 3 · §3 Caso 1 |
 | La conjetura de $y_p$ ya aparece en $y_h$ | Choque (Caso 2) | multiplicar el bloque por $x$ | §2.E regla del conjunto · §3 Caso 2 |
