@@ -24,20 +24,20 @@
 
 **Tabla de decisión:**
 
-| Si el enunciado dice… | Herramienta | Fórmula base | 👉 Ir a |
-|---|---|---|---|
-| "son equipotentes", "mismo cardinal", "misma cantidad de elementos", "demuestre que existe una biyección" | **Equipotencia** | $A\approx B\iff\exists\,f:A\to B$ biyectiva | **§2.A** · §4.A |
-| "existe $f$ inyectiva de $A$ en $B$", "$A\subseteq B$", "$\mathcal{P}(A)$" | **Dominancia** | $A\preccurlyeq B\iff\exists\,f:A\to B$ inyectiva | **§2.B** · §4.B |
-| "dominancia estricta", "hay inyección pero no biyección", "tiene más elementos que" | **Dominancia estricta** | $A\prec B\iff A\preccurlyeq B$ y $A\not\approx B$ | **§2.B** · §4.B |
-| "cuántas funciones van de $A$ en $B$" | **Potenciación cardinal** | $\left\lvert B^{A}\right\rvert=\lvert B\rvert^{\lvert A\rvert}$ | **§2.A** · §4.C |
-| "cuántos subconjuntos tiene", "conjunto de partes", $\mathcal{P}(A)$ con $\lvert A\rvert$ conocido | **Conjunto de partes** | $\left\lvert\mathcal{P}(A)\right\rvert=2^{\lvert A\rvert}$ | **§2.C** · **§2.E** · §4.C |
-| "ningún conjunto es equipotente con su conjunto de partes" | **Teorema de Cantor (5.8)** | $A\prec\mathcal{P}(A)$ | **§2.C** · §4.D |
-| "hay una inyección de $A$ en $B$ y una de $B$ en $A$" | **Cantor–Bernstein–Schröder (5.11)** | $A\preccurlyeq B\ \wedge\ B\preccurlyeq A\Rightarrow A\approx B$ | **§2.D** · §4.F |
-| "sea $F:\mathcal{P}(A)\to\mathcal{P}(A)$ creciente con $\subseteq$" | **Punto fijo de conjuntos** | $F(X)\subseteq F(Y)$ si $X\subseteq Y$ | **§2.D** · §4.E |
-| "es finito", "cuántos elementos tiene", "$\lvert A\rvert$", "cardinal de $A$" | **Cardinal finito** | $A$ finito $\iff\exists\,n\in\mathbb{N}:A\preccurlyeq n$ | **§2.E** · §4.G |
-| "todo subconjunto propio está dominado estrictamente", "ningún subconjunto propio equipotente" | **Finitud de Dedekind / naturales** | $B\subsetneq A\Rightarrow B\prec A$ | **§2.E** · §3.5 |
-| "hay $f:A\to A$ inyectiva y no sobreyectiva" | **Infinitud** | $f$ inyectiva no sobre $\Rightarrow A$ infinito | **§2.E** · **§3.6** |
-| "conjuntos disjuntos, únase y cuéntese", "$\lvert A\cup B\rvert$" | **Aritmética de cardinales finitos** | $\lvert A\cup B\rvert=\lvert A\rvert+\lvert B\rvert-\lvert A\cap B\rvert$ | **§2.E** · §4.G |
+| Si el enunciado dice…                                                                                     | Herramienta                          | Fórmula base                                                              | 👉 Ir a                    |
+| --------------------------------------------------------------------------------------------------------- | ------------------------------------ | ------------------------------------------------------------------------- | -------------------------- |
+| "son equipotentes", "mismo cardinal", "misma cantidad de elementos", "demuestre que existe una biyección" | **Equipotencia**                     | $A\approx B\iff\exists\,f:A\to B$ biyectiva                               | **§2.A** · §4.A            |
+| "existe $f$ inyectiva de $A$ en $B$", "$A\subseteq B$", "$\mathcal{P}(A)$"                                | **Dominancia**                       | $A\preccurlyeq B\iff\exists\,f:A\to B$ inyectiva                          | **§2.B** · §4.B            |
+| "dominancia estricta", "hay inyección pero no biyección", "tiene más elementos que"                       | **Dominancia estricta**              | $A\prec B\iff A\preccurlyeq B$ y $A\not\approx B$                         | **§2.B** · §4.B            |
+| "cuántas funciones van de $A$ en $B$"                                                                     | **Potenciación cardinal**            | $\left\lvert B^{A}\right\rvert=\lvert B\rvert^{\lvert A\rvert}$           | **§2.A** · §4.C            |
+| "cuántos subconjuntos tiene", "conjunto de partes", $\mathcal{P}(A)$ con $\lvert A\rvert$ conocido        | **Conjunto de partes**               | $\left\lvert\mathcal{P}(A)\right\rvert=2^{\lvert A\rvert}$                | **§2.C** · **§2.E** · §4.C |
+| "ningún conjunto es equipotente con su conjunto de partes"                                                | **Teorema de Cantor (5.8)**          | $A\prec\mathcal{P}(A)$                                                    | **§2.C** · §4.D            |
+| "hay una inyección de $A$ en $B$ y una de $B$ en $A$"                                                     | **Cantor–Bernstein–Schröder (5.11)** | $A\preccurlyeq B\ \wedge\ B\preccurlyeq A\Rightarrow A\approx B$          | **§2.D** · §4.F            |
+| "sea $F:\mathcal{P}(A)\to\mathcal{P}(A)$ creciente con $\subseteq$"                                       | **Punto fijo de conjuntos**          | $F(X)\subseteq F(Y)$ si $X\subseteq Y$                                    | **§2.D** · §4.E            |
+| "es finito", "cuántos elementos tiene", "$\lvert A\rvert$", "cardinal de $A$"                             | **Cardinal finito**                  | $A$ finito $\iff\exists\,n\in\mathbb{N}:A\preccurlyeq n$                  | **§2.E** · §4.G            |
+| "todo subconjunto propio está dominado estrictamente", "ningún subconjunto propio equipotente"            | **Finitud de Dedekind / naturales**  | $B\subsetneq A\Rightarrow B\prec A$                                       | **§2.E** · §3.5            |
+| "hay $f:A\to A$ inyectiva y no sobreyectiva"                                                              | **Infinitud**                        | $f$ inyectiva no sobre $\Rightarrow A$ infinito                           | **§2.E** · **§3.6**        |
+| "conjuntos disjuntos, únase y cuéntese", "$\lvert A\cup B\rvert$"                                         | **Aritmética de cardinales finitos** | $\lvert A\cup B\rvert=\lvert A\rvert+\lvert B\rvert-\lvert A\cap B\rvert$ | **§2.E** · §4.G            |
 
 **Frases literales del profe → método:**
 
