@@ -23,15 +23,15 @@
 
 **Tabla de decisión (frase del enunciado → modelo):**
 
-| Si el enunciado dice… | Modelo | Fórmula base |
-|---|---|---|
-| "número de llegadas / accidentes / nacimientos / defectos en un intervalo" | **Poisson** | \(P(X=x)=\dfrac{e^{-\lambda}\lambda^{x}}{x!}\) |
-| "tiempo de espera hasta que ocurran \(r\) eventos" | **Gamma** | \(f(x)=\dfrac{\lambda^{r}}{\Gamma(r)}x^{r-1}e^{-\lambda x}\) |
-| "tiempo hasta el primer evento" / "tiempo de vida" con tasa constante | **Gamma con \(r=1\)** = **Exponencial** | \(f(x)=\lambda e^{-\lambda x}\) |
-| menciona **"Erlang"** | **Gamma** con \(r\) entero positivo | \(\Gamma(r)=(r-1)!\) |
-| menciona **"Ji-cuadrado" / "Chi-cuadrado"** | **Gamma** con \(\lambda=\tfrac12\), \(r=\tfrac{k}{2}\) | \(E(X)=k\), \(V(X)=2k\) |
-| "cualquier valor entre \(a\) y \(b\) con la misma probabilidad" / "elegido al azar en \([a,b]\)" / número aleatorio | **Uniforme continua** | \(f(x)=\dfrac{1}{b-a}\) |
-| "los eventos ocurren de forma independiente y a tasa constante" | **Poisson** (o **Gamma** si se pregunta por el tiempo) | — |
+| Si el enunciado dice…                                                                                               | Modelo                                                 | Fórmula base                                                 |
+| ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------ | ------------------------------------------------------------ |
+| "número de llegadas / accidentes / nacimientos / defectos en un intervalo"                                          | **Poisson**                                            | \(P(X=x)=\dfrac{e^{-\lambda}\lambda^{x}}{x!}\)               |
+| "tiempo de espera hasta que ocurran \(r\) eventos"                                                                  | **Gamma**                                              | \(f(x)=\dfrac{\lambda^{r}}{\Gamma(r)}x^{r-1}e^{-\lambda x}\) |
+| "tiempo hasta el primer evento" / "tiempo de vida" con tasa constante                                               | **Gamma con \(r=1\)** = **Exponencial**                | \(f(x)=\lambda e^{-\lambda x}\)                              |
+| menciona **"Erlang"**                                                                                               | **Gamma** con \(r\) entero positivo                    | \(\Gamma(r)=(r-1)!\)                                         |
+| menciona **"Ji-cuadrado" / "Chi-cuadrado"**                                                                         | **Gamma** con \(\lambda=\tfrac12\), \(r=\tfrac{k}{2}\) | \(E(X)=k\), \(V(X)=2k\)                                      |
+| "cualquier valor entre \(a\) y \(b\) con la misma probabilidad" / "elegido al azar en \([a,b]\)" / número aleatorio | **Uniforme continua**                                  | \(f(x)=\dfrac{1}{b-a}\)                                      |
+| "los eventos ocurren de forma independiente y a tasa constante"                                                     | **Poisson** (o **Gamma** si se pregunta por el tiempo) | —                                                            |
 
 ---
 
