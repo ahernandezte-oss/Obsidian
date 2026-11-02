@@ -98,7 +98,7 @@ $$
 - **Micro-verificación:** $\Gamma(4)=3!=6$
 
 > **🔤 Diccionario:**
-> - $r$: argumento de la función gamma (positivo) es el r-ésimo evento que se mide.
+> - $r$: argumento de la función gamma (positivo) es el r-ésimo evento que se mide en X tiempo.
 > - $x$: variable de integración (se elimina al integrar).
 > - $\Gamma(r)$: constante normalizadora de la distribución Gamma.
 
