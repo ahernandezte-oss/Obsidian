@@ -2,7 +2,7 @@
 
 > **🧾 FICHA DEL ARCHIVO**
 > - **Archivo:** `261027_MULTIPLICACION_Y_UNICIDAD_DE_R.md`
-> - **Fecha de transcripción:** 27/10/2026 (`DDMMAA` = `271026`)
+> - **Fecha de transcripción:** 27/10/2026 (`AAMMDD` = `261027`)
 > - **Tema principal:** MULTIPLICACIÓN DE REALES (primero solo en $\mathbb R^{+}$, después ley de signos), $\mathbb R$ como **campo ordenado completo** y **teorema de unicidad**: todo campo ordenado completo es isomorfo a $\mathbb R$. Al final, **adelanto** de equipotencia, dominancia y $\mathcal P(A)\approx2^{A}$.
 > - **Continuidad:** cierra lo que `261022_CORTADURAS_Y_REALES` dejó abierto (§3.6 de aquella: "falta la multiplicación"). Usa de allí la suma, el opuesto aditivo (§2.H), la unión $=$ ínfimo (§2.D) y el **lema de aproximación** (§2.G). Usa de `261020_RECURSION_COMPLETA_Y_SISTEMAS_DE_PEANO` los sistemas de Peano (§2.C). **No repite** nada de esas dos: solo lo cita.
 > - **Cuidado con el solapamiento:** el bloque final de equipotencia es el **inicio** del tema que `261029_CARDINALIDAD_Y_FINITUD` desarrolla completo (§2.A–§2.B). Aquí solo se registra lo nuevo de esta clase (§2.I).

@@ -2,7 +2,7 @@
 
 > **🧾 FICHA DEL ARCHIVO**
 > - **Archivo:** `261022_CORTADURAS_Y_REALES.md`
-> - **Fecha de transcripción:** 22/10/2026 (`DDMMAA` = `221026`)
+> - **Fecha de transcripción:** 22/10/2026 (`AAMMDD` = `261022`)
 > - **Tema principal:** CORTADURAS DE DEDEKIND (versión "hacia arriba") y construcción de $\mathbb R$: definición de número real con cuatro condiciones, orden por contenencia inversa, unión = ínfimo, reales racionales e irracionales, suma, lema de aproximación, opuesto aditivo y paso al supremo.
 > - **Continuidad:** toma de `261020_RECURSION_COMPLETA_Y_SISTEMAS_DE_PEANO` las construcciones de $\mathbb Z$ y $\mathbb Q$ (§2.D–§2.E) y la noción de campo ordenado con conjunto de positivos (§2.F). Aquí **no se repiten**: solo se citan. Esta clase es la continuación directa de esa.
 > - **Fuente:** transcripción de clase. Lo agregado o corregido por mí va marcado con `➕`.

@@ -2,7 +2,7 @@
 
 > **🧾 FICHA DEL ARCHIVO**
 > - **Archivo:** `261103_CONTABLES_SELECCION_Y_PRODUCTO.md`
-> - **Fecha de transcripción:** 03/11/2026 (`DDMMAA` = `031126`)
+> - **Fecha de transcripción:** 03/11/2026 (`AAMMDD` = `261103`)
 > - **Tema principal:** CONTABLES · FUNCIONES SELECTORAS (elección finita) · PRODUCTO CARTESIANO GENERALIZADO. Incluye el cierre de cardinales finitos: $\left\lvert B^{A}\right\rvert$, soporte de $A^{B}$ y carácter finito.
 > - **Continuidad:** NO repite lo de `261029_CARDINALIDAD_Y_FINITUD` (equipotencia, dominancia, Cantor, punto fijo, Cantor–Bernstein, definición de finito y cardinal). Solo lo **cita**.
 > - **Fuente:** transcripción de clase. Lo agregado (o corregido) por mí va marcado con `➕`.

@@ -2,7 +2,7 @@
 
 > **🧾 FICHA DEL ARCHIVO**
 > - **Archivo:** `261015_RECURSION_SIMPLE_Y_PARAMETRICA.md`
-> - **Fecha de transcripción:** 15/10/2026 (`DDMMAA` = `151026`)
+> - **Fecha de transcripción:** 15/10/2026 (`AAMMDD` = `261015`)
 > - **Tema principal:** RECURSIÓN — antecesor, recursión finita e infinita, teoremas de restricción ($3.29$ y $3.30$), existencia y unicidad de la recursión finita ($3.31$), teorema de la recursión simple ($3.32$), recursión paramétrica y su uso para definir suma, multiplicación, potenciación y factorial.
 > - **Continuidad:** esta clase es **anterior** en el calendario a `261029_CARDINALIDAD_Y_FINITUD` y a `261103_CONTABLES_SELECCION_Y_PRODUCTO`. No repite nada de ellas, pero es la máquina que ambas usan: el cardinal finito $\lvert A\rvert$, los conteos por bloques y las sucesiones de apoyo salen de aquí.
 > - **Fuente:** transcripción de clase. Lo agregado o corregido por mí va marcado con `➕`.

@@ -2,7 +2,7 @@
 
 > **🧾 FICHA DEL ARCHIVO**
 > - **Archivo:** `261020_RECURSION_COMPLETA_Y_SISTEMAS_DE_PEANO.md`
-> - **Fecha de transcripción:** 20/10/2026 (`DDMMAA` = `201026`)
+> - **Fecha de transcripción:** 20/10/2026 (`AAMMDD` = `261020`)
 > - **Tema principal:** RECURSIÓN COMPLETA (depende de varios valores anteriores), SISTEMAS DE PEANO (todo modelo es una copia de $\mathbb N$) y arranque del capítulo de sistemas numéricos: construcción de $\mathbb Z$ y $\mathbb Q$ como cocientes.
 > - **Continuidad:** toma de `261015_RECURSION_SIMPLE_Y_PARAMETRICA` la recursión simple ($3.32$), la paramétrica y el teorema "orden de pertenencia = orden de la suma" (§2.H de aquella). **No repite** nada de eso: aquí solo se cita. Cierra la parte de $\mathbb N$ y abre el capítulo 4.
 > - **Fuente:** transcripción de clase. Lo agregado o corregido por mí va marcado con `➕`.
