@@ -27,7 +27,8 @@
 | Una raíz $\lambda$ se repite $k$ veces | Raíz repetida (Caso 0) | $(C_1 + C_2x + \cdots + C_kx^{k-1})e^{\lambda x}$ | §2.B caso 2 · §3 Caso 0 |
 | Aparecen $\alpha \pm \beta i$ | Complejas conjugadas (Caso 1) | $e^{\alpha x}(C_1\cos\beta x + C_2\sin\beta x)$ | §2.B caso 3 · §3 Caso 1 |
 | La conjetura de $y_p$ ya aparece en $y_h$ | Choque (Caso 2) | multiplicar el bloque por $x$ | §2.E regla del conjunto · §3 Criterio del choque |
-| Falta el término $y$ o alguna derivada | Factorizar $\lambda$ (Caso 4) | $\lambda = 0$ es raíz → aporta constante | §3 Caso 4 |
+| Falta el término $y$ o alguna derivada | Factorizar $\lambda$ (Caso 4) | $\lambda = 0$ es raíz → aporta constante | §3 Caso 4 · §3 Criterio del choque |
+| $g(x)$ trae un polinomio (por ejemplo $2x$) | Probar $\lambda_0 = 0$ | si $P(0) = 0$ hay choque → $x^m$ | §3 Criterio del choque (tabla 1) |
 | $g(x)$ trae $\sin(bx)$ o $\cos(bx)$ | Seno y coseno **siempre juntos** (Caso 7) | $A\cos bx + B\sin bx$ | §2.E · §3 Caso 7 |
 
 **Frases literales del profesor (para identificar el método):**
@@ -150,7 +151,7 @@ $$
    - $\sin(ax)$ o $\cos(ax) \rightarrow \{\sin(ax), \cos(ax)\}$
    - $e^{ax}\cos(bx)$ o $e^{ax}\sin(bx) \rightarrow \{e^{ax}\cos(bx), e^{ax}\sin(bx)\}$
 2. Compara cada conjunto con $y_h$.
-3. Si hay **choque** (un elemento ya está en $y_h$), multiplica **todo ese bloque** por $x$ (y por $x^2$ si se repite).
+3. Si hay **choque** (un elemento ya está en $y_h$), multiplica **todo ese bloque** por $x^m$, donde $m$ es la multiplicidad → criterio completo en **§3 Criterio del choque** (tabla de $\lambda_0$ + tabla de multiplicidad).
 4. Si dos términos de $g(x)$ comparten familia (por ejemplo $e^{3x}\cos x$ y $e^{3x}\sin x$), es **una sola conjetura**, no dos.
 5. $y_p$ = combinación lineal de todos los elementos del conjunto, con coeficientes desconocidos.
 
@@ -233,14 +234,48 @@ $$
 
 **Por qué se usa un número complejo:** $y_h$ contiene $e^{ax}\cos bx$ y $e^{ax}\sin bx$ **exactamente cuando** $a + bi$ y $a - bi$ son raíces de la ecuación característica. Por eso el choque se pregunta así: ¿es $a + bi$ raíz de $P(\lambda)$?
 
-| Paso | Qué se hace | Ejemplo con $g(x) = e^{3x}\cos x$ y $P(\lambda) = \lambda^2 - 8\lambda + 20$ |
-|---|---|---|
-| 1 | Leer $a$ y $b$ de la forma de $g(x)$ | $a = 3$ (exponente), $b = 1$ (frecuencia) |
-| 2 | Formar el complejo candidato $\lambda_0 = a + bi$ | $\lambda_0 = 3 + i$ |
-| 3 | Evaluar $P(\lambda_0)$ | $P(3+i) = (3+i)^2 - 8(3+i) + 20 = 4 - 2i$ |
-| 4 | Decidir | $P(3+i) \neq 0$ → **no hay choque** → no se multiplica por $x$ |
+#### 1. Qué número $\lambda_0$ se prueba (según el término de $g(x)$)
 
-**Qué es $P(\lambda_0)$:** es el polinomio característico **evaluado** en el complejo $\lambda_0$. $P$ es una función de $\lambda$; al darle un valor devuelve un número (aquí, complejo). No es una fórmula nueva: es el mismo $P(\lambda) = \lambda^2 - 8\lambda + 20$ de la §2.B.
+| Término de $g(x)$ | Familia (conjunto de derivadas) | $\lambda_0$ que se prueba |
+|---|---|---|
+| $x^n$ (polinomio) | $\{x^n, x^{n-1}, \ldots, x, 1\}$ | $\mathbf{0}$ |
+| $e^{ax}$ | $\{e^{ax}\}$ | $a$ |
+| $\cos bx$ o $\sin bx$ | $\{\cos bx, \sin bx\}$ | $bi$ |
+| $e^{ax}\cos bx$ o $e^{ax}\sin bx$ | $\{e^{ax}\cos bx, e^{ax}\sin bx\}$ | $a + bi$ |
+| $x^ne^{ax}$ (polinomio × exponencial) | $\{x^ne^{ax}, \ldots, x e^{ax}, e^{ax}\}$ | $a$ |
+| $x^n\cos bx$ o $x^n\sin bx$ | $\{x^n\cos bx, \ldots\}$ | $bi$ |
+
+**Lectura de la tabla:** $a$ es el número que multiplica a $x$ **en el exponente** de $e^{ax}$; $b$ es el número que multiplica a $x$ **dentro** de $\cos bx$ o $\sin bx$.
+
+- Polinomio → no hay exponencial ($a = 0$) ni frecuencia ($b = 0$) → $\lambda_0 = 0$.
+- Solo coseno/seno → $a = 0$ → $\lambda_0 = bi$.
+
+**Atajo para el polinomio:** $P(0)$ es el término independiente del polinomio característico, es decir **el coeficiente de $y$**. Por eso:
+
+$$P(0) = 0 \iff \text{la EDO no tiene término en } y \;(\text{falta } a_0)$$
+
+y en ese caso la constante ya está en $y_h$.
+
+#### 2. Cuántas $x$ se multiplican (multiplicidad)
+
+| $P(\lambda_0)$ | $P'(\lambda_0)$ | $P''(\lambda_0)$ | Corrección |
+|---|---|---|---|
+| $\neq 0$ | — | — | **ninguna** (sin choque) |
+| $= 0$ | $\neq 0$ | — | multiplicar por $x$ |
+| $= 0$ | $= 0$ | $\neq 0$ | multiplicar por $x^2$ |
+
+**Regla general:** se deriva $P$ hasta el primer valor distinto de $0$. Si $P(\lambda_0) = \cdots = P^{(m-1)}(\lambda_0) = 0$ pero $P^{(m)}(\lambda_0) \neq 0$, la multiplicidad es $m$ → se multiplica por $x^m$ (§3 Caso 0).
+
+#### 3. Ejemplo del cálculo completo
+
+| Paso | Qué se hace | Con $g(x) = e^{3x}\cos x$ y $P(\lambda) = \lambda^2 - 8\lambda + 20$ |
+|---|---|---|
+| 1 | Leer $a$ y $b$ de $g(x)$ | $a = 3$ (exponente), $b = 1$ (frecuencia) |
+| 2 | Formar el candidato $\lambda_0 = a + bi$ | $\lambda_0 = 3 + i$ |
+| 3 | Evaluar $P(\lambda_0)$ | $P(3+i) = (3+i)^2 - 8(3+i) + 20 = 4 - 2i$ |
+| 4 | Decidir | $P(3+i) \neq 0$ → **no hay choque** → sin $x$ |
+
+**Qué es $P(\lambda_0)$:** es el polinomio característico **evaluado** en $\lambda_0$. $P$ es una función de $\lambda$; al darle un valor devuelve un número. No es una fórmula nueva: es el mismo $P(\lambda)$ de la §2.B.
 
 **Atajo:** $P(3+i) \neq 0$ ya decide por los dos, porque con coeficientes reales $P(3-i) = \overline{P(3+i)} \neq 0$.
 
@@ -258,7 +293,7 @@ $$
 ### 4.2 Coeficientes indeterminados
 1. Ecuación característica → raíces → escribe $y_h$.
 2. Mira $g(x)$ → escribe la conjetura $y_p$ (§2.E, tabla + regla del conjunto).
-3. **Verifica choque** con $y_h$; si choca, multiplica ese bloque por $x$ (§3 Caso 2).
+3. **Verifica choque**: forma $\lambda_0$ del término (§3 Criterio del choque, tabla 1) y evalúa $P(\lambda_0)$; si es $0$, mira la multiplicidad con $P'$ (tabla 2) y multiplica el bloque por $x^m$.
 4. Deriva $y_p$ las veces necesarias **y sustituye** en la EDO.
 5. **Iguala coeficientes** término a término → sistema → resuelve.
 6. $y = y_h + y_p$.
