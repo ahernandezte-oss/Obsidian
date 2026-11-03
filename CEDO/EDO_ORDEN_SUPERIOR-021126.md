@@ -28,7 +28,7 @@
 | Aparecen $\alpha \pm \beta i$ | Complejas conjugadas (Caso 1) | $e^{\alpha x}(C_1\cos\beta x + C_2\sin\beta x)$ | §2.B caso 3 · §3 Caso 1 |
 | La conjetura de $y_p$ ya aparece en $y_h$ | Choque (Caso 2) | multiplicar el bloque por $x$ | §2.E regla del conjunto · §3 Criterio del choque |
 | Falta el término $y$ o alguna derivada | Factorizar $\lambda$ (Caso 4) | $\lambda = 0$ es raíz → aporta constante | §3 Caso 4 · §3 Criterio del choque |
-| $g(x)$ trae un polinomio (por ejemplo $2x$) | Probar $\lambda_0 = 0$ | si $P(0) = 0$ hay choque → $x^m$ | §3 Criterio del choque (tabla 1) |
+| $g(x)$ trae un polinomio (por ejemplo $2x$) | Probar $\lambda_0 = 0$ | si $P(0) = 0$ hay choque → $x^m$ | §2.E columna $\lambda_0$ · §3 |
 | $g(x)$ trae $\sin(bx)$ o $\cos(bx)$ | Seno y coseno **siempre juntos** (Caso 7) | $A\cos bx + B\sin bx$ | §2.E · §3 Caso 7 |
 
 **Frases literales del profesor (para identificar el método):**
@@ -133,29 +133,34 @@ $$
 
 **🔤 Diccionario:** $W$: determinante wronskiano · $y_i^{(j)}$: derivada $j$-ésima de $y_i$ · $\det$: determinante.
 
-### E. Coeficientes indeterminados — tabla de conjetura $y_p$
+### E. Coeficientes indeterminados — familia, conjetura y número de choque
 
-| $g(x)$ | Conjetura $y_p$ |
-|---|---|
-| Polinomio de grado $n$ | $A_nx^n + \cdots + A_1x + A_0$ |
-| $C e^{ax}$ | $A e^{ax}$ |
-| $C\sin(ax)$ o $C\cos(ax)$ | $A\cos(ax) + B\sin(ax)$ (siempre ambos) |
-| $C e^{ax}\sin(bx)$ o $C e^{ax}\cos(bx)$ | $e^{ax}\left(A\cos(bx) + B\sin(bx)\right)$ |
-| Producto de términos | multiplicar las conjeturas |
-| Suma de términos | sumar las conjeturas |
+**Tabla única.** Para cada término de $g(x)$: su familia de derivadas, la conjetura de $y_p$ y el número $\lambda_0$ con el que se prueba el choque (§3).
 
-**Regla del conjunto (familia de derivadas):**
-1. Escribe el **conjunto** de derivadas de cada término de $g(x)$:
-   - $x^n \rightarrow \{x^n, x^{n-1}, \ldots, x, 1\}$
-   - $e^{ax} \rightarrow \{e^{ax}\}$
-   - $\sin(ax)$ o $\cos(ax) \rightarrow \{\sin(ax), \cos(ax)\}$
-   - $e^{ax}\cos(bx)$ o $e^{ax}\sin(bx) \rightarrow \{e^{ax}\cos(bx), e^{ax}\sin(bx)\}$
-2. Compara cada conjunto con $y_h$.
-3. Si hay **choque** (un elemento ya está en $y_h$), multiplica **todo ese bloque** por $x^m$, donde $m$ es la multiplicidad → criterio completo en **§3 Criterio del choque** (tabla de $\lambda_0$ + tabla de multiplicidad).
-4. Si dos términos de $g(x)$ comparten familia (por ejemplo $e^{3x}\cos x$ y $e^{3x}\sin x$), es **una sola conjetura**, no dos.
-5. $y_p$ = combinación lineal de todos los elementos del conjunto, con coeficientes desconocidos.
+| Término de $g(x)$ | Familia (conjunto de derivadas) | Conjetura $y_p$ | $\lambda_0$ de choque |
+|---|---|---|---|
+| $x^n$ (polinomio) | $\{x^n, x^{n-1}, \ldots, x, 1\}$ | $A_nx^n + \cdots + A_1x + A_0$ | $\mathbf{0}$ |
+| $C e^{ax}$ | $\{e^{ax}\}$ | $A e^{ax}$ | $a$ |
+| $C\cos(bx)$ o $C\sin(bx)$ | $\{\cos bx, \sin bx\}$ | $A\cos bx + B\sin bx$ | $bi$ |
+| $C e^{ax}\cos(bx)$ o $C e^{ax}\sin(bx)$ | $\{e^{ax}\cos bx, e^{ax}\sin bx\}$ | $e^{ax}\left(A\cos bx + B\sin bx\right)$ | $a + bi$ |
+| $x^ne^{ax}$ | $\{x^ne^{ax}, \ldots, x e^{ax}, e^{ax}\}$ | $\left(A_nx^n + \cdots + A_0\right)e^{ax}$ | $a$ |
+| $x^n\cos(bx)$ o $x^n\sin(bx)$ | $\{x^n\cos bx, \ldots, \cos bx, \sin bx\}$ | $\left(A_nx^n + \cdots + A_0\right)\cos bx + \left(B_nx^n + \cdots + B_0\right)\sin bx$ | $bi$ |
 
-**🔤 Diccionario:** $A, B, C, D, \ldots$: coeficientes desconocidos a determinar (NO son $C_1, C_2$ de $y_h$) · $a, b$: parámetros de la exponencial y de la frecuencia · $x^n$: grado del polinomio.
+**Reglas de combinación:** producto de términos → **multiplicar** conjeturas · suma de términos → **sumar** conjeturas.
+
+**Pasos (regla del conjunto):**
+1. Localiza cada término de $g(x)$ en la tabla y anota **su familia y su $\lambda_0$**.
+2. Si dos términos comparten familia (por ejemplo $e^{3x}\cos x$ y $e^{3x}\sin x$), es **una sola conjetura**, no dos.
+3. Prueba el choque con el $\lambda_0$ anotado → criterio en **§3 Criterio del choque**.
+4. Si hay choque, multiplica **todo el bloque** por $x^m$ ($m$ = multiplicidad, §3).
+5. $y_p$ = suma de las conjeturas, con coeficientes desconocidos.
+
+**🔤 Diccionario:**
+- $A, B, C, D, \ldots$: coeficientes desconocidos a determinar (NO son las constantes $C_1, C_2$ de $y_h$).
+- $a$: el número que multiplica a $x$ **en el exponente** de $e^{ax}$.
+- $b$: el número que multiplica a $x$ **dentro** de $\cos bx$ o $\sin bx$ (frecuencia).
+- $n$: grado del polinomio.
+- $\lambda_0$: el número complejo con el que se prueba el choque (no es una raíz; es un candidato).
 
 ### F. Variación de parámetros (Cramer + Wronskiano)
 
@@ -234,31 +239,13 @@ $$
 
 **Por qué se usa un número complejo:** $y_h$ contiene $e^{ax}\cos bx$ y $e^{ax}\sin bx$ **exactamente cuando** $a + bi$ y $a - bi$ son raíces de la ecuación característica. Por eso el choque se pregunta así: ¿es $a + bi$ raíz de $P(\lambda)$?
 
-#### 1. Qué número $\lambda_0$ se prueba (según el término de $g(x)$)
+**Pasos:**
+1. Toma el $\lambda_0$ del término en la **última columna de la tabla de §2.E** (polinomio → $0$; $e^{ax}$ → $a$; $\cos bx$ o $\sin bx$ → $bi$; $e^{ax}\cos bx$ → $a+bi$).
+2. Evalúa el polinomio característico en ese punto: $P(\lambda_0)$.
+3. Si $P(\lambda_0) \neq 0$ → **no hay choque**, la conjetura se deja como está.
+4. Si $P(\lambda_0) = 0$ → **hay choque**; cuántas $x$ se multiplican se decide con la tabla de multiplicidad.
 
-| Término de $g(x)$ | Familia (conjunto de derivadas) | $\lambda_0$ que se prueba |
-|---|---|---|
-| $x^n$ (polinomio) | $\{x^n, x^{n-1}, \ldots, x, 1\}$ | $\mathbf{0}$ |
-| $e^{ax}$ | $\{e^{ax}\}$ | $a$ |
-| $\cos bx$ o $\sin bx$ | $\{\cos bx, \sin bx\}$ | $bi$ |
-| $e^{ax}\cos bx$ o $e^{ax}\sin bx$ | $\{e^{ax}\cos bx, e^{ax}\sin bx\}$ | $a + bi$ |
-| $x^ne^{ax}$ (polinomio × exponencial) | $\{x^ne^{ax}, \ldots, x e^{ax}, e^{ax}\}$ | $a$ |
-| $x^n\cos bx$ o $x^n\sin bx$ | $\{x^n\cos bx, \ldots\}$ | $bi$ |
-
-**Lectura de la tabla:** $a$ es el número que multiplica a $x$ **en el exponente** de $e^{ax}$; $b$ es el número que multiplica a $x$ **dentro** de $\cos bx$ o $\sin bx$.
-
-- Polinomio → no hay exponencial ($a = 0$) ni frecuencia ($b = 0$) → $\lambda_0 = 0$.
-- Solo coseno/seno → $a = 0$ → $\lambda_0 = bi$.
-
-**Atajo para el polinomio:** $P(0)$ es el término independiente del polinomio característico, y ese término es exactamente el coeficiente de $y$:
-
-$$
-P(0) = a_0
-$$
-
-De modo que $P(0) = 0$ equivale a que la EDO **no tenga término en $y$**; en ese caso la constante ya está en $y_h$ y hay que subir a $x$.
-
-#### 2. Cuántas $x$ se multiplican (multiplicidad)
+#### Multiplicidad: cuántas $x$ se multiplican
 
 | $P(\lambda_0)$ | $P'(\lambda_0)$ | $P''(\lambda_0)$ | Corrección |
 |---|---|---|---|
@@ -268,18 +255,29 @@ De modo que $P(0) = 0$ equivale a que la EDO **no tenga término en $y$**; en es
 
 **Regla general:** se deriva $P$ hasta el primer valor distinto de $0$. Si $P(\lambda_0) = \cdots = P^{(m-1)}(\lambda_0) = 0$ pero $P^{(m)}(\lambda_0) \neq 0$, la multiplicidad es $m$ → se multiplica por $x^m$ (§3 Caso 0).
 
-#### 3. Ejemplo del cálculo completo
+#### Atajo para el caso polinómico ($\lambda_0 = 0$)
+
+$P(0)$ es el término independiente del polinomio característico, y ese término es exactamente el coeficiente de $y$:
+
+$$
+P(0) = a_0
+$$
+
+De modo que $P(0) = 0$ equivale a que la EDO **no tenga término en $y$**; en ese caso la constante ya vive en $y_h$ y hay que subir a $x$.
+
+⚠️ **No confundir:** $a$ (sin subíndice) es el exponente de $e^{ax}$; $a_0$ (con subíndice) es el coeficiente de $y$ en la EDO.
+
+#### Ejemplo del cálculo completo
 
 | Paso | Qué se hace | Con $g(x) = e^{3x}\cos x$ y $P(\lambda) = \lambda^2 - 8\lambda + 20$ |
 |---|---|---|
-| 1 | Leer $a$ y $b$ de $g(x)$ | $a = 3$ (exponente), $b = 1$ (frecuencia) |
-| 2 | Formar el candidato $\lambda_0 = a + bi$ | $\lambda_0 = 3 + i$ |
-| 3 | Evaluar $P(\lambda_0)$ | $P(3+i) = (3+i)^2 - 8(3+i) + 20 = 4 - 2i$ |
-| 4 | Decidir | $P(3+i) \neq 0$ → **no hay choque** → sin $x$ |
+| 1 | Tomar $\lambda_0$ de §2.E | término $e^{ax}\cos bx$ con $a = 3$, $b = 1$ → $\lambda_0 = 3 + i$ |
+| 2 | Evaluar $P(\lambda_0)$ | $P(3+i) = (3+i)^2 - 8(3+i) + 20 = 4 - 2i$ |
+| 3 | Decidir | $P(3+i) \neq 0$ → **no hay choque** → sin $x$ |
 
 **Qué es $P(\lambda_0)$:** es el polinomio característico **evaluado** en $\lambda_0$. $P$ es una función de $\lambda$; al darle un valor devuelve un número. No es una fórmula nueva: es el mismo $P(\lambda)$ de la §2.B.
 
-**Atajo:** $P(3+i) \neq 0$ ya decide por los dos, porque con coeficientes reales $P(3-i) = \overline{P(3+i)} \neq 0$.
+**Atajo del conjugado:** $P(3+i) \neq 0$ ya decide por los dos, porque con coeficientes reales $P(3-i) = \overline{P(3+i)} \neq 0$.
 
 ---
 
@@ -295,7 +293,7 @@ De modo que $P(0) = 0$ equivale a que la EDO **no tenga término en $y$**; en es
 ### 4.2 Coeficientes indeterminados
 1. Ecuación característica → raíces → escribe $y_h$.
 2. Mira $g(x)$ → escribe la conjetura $y_p$ (§2.E, tabla + regla del conjunto).
-3. **Verifica choque**: forma $\lambda_0$ del término (§3 Criterio del choque, tabla 1) y evalúa $P(\lambda_0)$; si es $0$, mira la multiplicidad con $P'$ (tabla 2) y multiplica el bloque por $x^m$.
+3. **Verifica choque**: toma el $\lambda_0$ del término en la tabla de §2.E y evalúa $P(\lambda_0)$; si es $0$, mira la multiplicidad con $P'$ (§3) y multiplica el bloque por $x^m$.
 4. Deriva $y_p$ las veces necesarias **y sustituye** en la EDO.
 5. **Iguala coeficientes** término a término → sistema → resuelve.
 6. $y = y_h + y_p$.
