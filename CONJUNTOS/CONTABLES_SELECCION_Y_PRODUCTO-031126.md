@@ -262,6 +262,8 @@ $$
 
 Como los dos números solo tienen primos $2$ y $3$, basta comparar $v_{2}$ y $v_{3}$. Sin TFA, dos parejas distintas podrían dar el mismo producto y $\Psi$ dejaría de ser inyectiva.
 
+`➕` **Nota sobre el $+1$:** el $+1$ es una **convención** de la clase (hace que la imagen evite el $1$ y que la fórmula sirva aunque $\mathbb{N}$ se tome empezando en $1$). **No** es necesario para la inyectividad: $(n,m)\mapsto2^{\,n}3^{\,m}$ también es inyectiva por TFA. Si copias la fórmula del tablero, mantenla; si usas la otra, la prueba es idéntica.
+
 $$
 \mathbb{Z}\ \text{enumerable},\qquad
 \mathbb{Q}\ \text{enumerable}
