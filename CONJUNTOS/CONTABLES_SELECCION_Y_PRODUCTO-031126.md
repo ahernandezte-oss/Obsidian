@@ -227,6 +227,8 @@ $$
 | **F6** | Si $A$ es contable, entonces $A^{n}$ es contable para todo $n\in\mathbb{N}$ (sucesiones finitas de $A$) |
 | **F7** | $A$ enumerable $\Longrightarrow A^{n}$ enumerable (ejercicio) |
 | **F8** | Unión **enumerable** de enumerables es contable `➕` (usa elección numerable; el truco de primos **no** sirve, ver §3.4) |
+| **F9** `➕` | Si $A\preccurlyeq\mathbb{N}$ y $B\preccurlyeq\mathbb{N}$, entonces $A\times B\preccurlyeq\mathbb{N}$: **producto de dos contables es contable**. Prueba: con $f:A\to\mathbb{N}$ y $h:B\to\mathbb{N}$ inyectivas, $(a,b)\mapsto\left(f(a),h(b)\right)$ es inyectiva en $\mathbb{N}\times\mathbb{N}\approx\mathbb{N}$ |
+| **F10** `➕` | $\mathbb{N}\preccurlyeq\mathbb{Z}$ y $\mathbb{N}\preccurlyeq\mathbb{Q}$: la **inclusión** $n\mapsto n$ es inyectiva (§2.B, propiedad 2). Es el eslabón que falta para probar que $\mathbb{Z}$ y $\mathbb{Q}$ son **infinitos** |
 
 **Las tres codificaciones que hay que saber de memoria:**
 
@@ -236,11 +238,45 @@ $$
 (n,m)\longmapsto 2^{\,n+1}\,3^{\,m+1}
 $$
 
+**El par completo de inyecciones (Cantor–Bernstein):**
+
+$$
+\iota:\mathbb{N}\to\mathbb{N}\times\mathbb{N},\quad \iota(n)=(n,0)
+\qquad\qquad
+\Psi:\mathbb{N}\times\mathbb{N}\to\mathbb{N},\quad \Psi(n,m)=2^{\,n+1}3^{\,m+1}
+$$
+
+$$
+\mathbb{N}\preccurlyeq\mathbb{N}\times\mathbb{N}\ \wedge\ \mathbb{N}\times\mathbb{N}\preccurlyeq\mathbb{N}
+\ \Longrightarrow\ \mathbb{N}\times\mathbb{N}\approx\mathbb{N}
+\qquad\left(\text{Cantor–Bernstein, §2.D de } -291026\right)
+$$
+
+**🧠 Por qué la TFA es imprescindible aquí.** En el número $2^{\,a+1}3^{\,b+1}$ los exponentes **no se ven**. La TFA es el único instrumento que permite **leerlos**:
+
+$$
+v_{p}(n):=\text{exponente del primo } p \text{ en la factorización de } n
+\qquad\qquad
+n=m\iff v_{p}(n)=v_{p}(m)\ \ \forall\,p\ \text{primo}
+$$
+
+Como los dos números solo tienen primos $2$ y $3$, basta comparar $v_{2}$ y $v_{3}$. Sin TFA, dos parejas distintas podrían dar el mismo producto y $\Psi$ dejaría de ser inyectiva.
+
 $$
 \mathbb{Z}\ \text{enumerable},\qquad
 \mathbb{Q}\ \text{enumerable}
-\qquad(\text{ambos por encaje en } \mathbb{N}\times\mathbb{N})
 $$
+
+**🧠 De dónde sale cada eslabón:**
+
+| Afirmación | Justificación |
+|---|---|
+| $\mathbb{Z}=\pi\left[\mathbb{N}\times\mathbb{N}\right]$ | en el curso $\mathbb{Z}=(\mathbb{N}\times\mathbb{N})/\!\sim$ (clases de diferencia) y la proyección $\pi$ es **sobreyectiva** |
+| $\mathbb{Z}$ es contable | **F3** aplicado a $\pi$ |
+| $\mathbb{N}\subseteq\mathbb{Z}$ (la clase de $(n,0)$ **es** el entero $n$) | por eso la inclusión $n\mapsto n$ es inyectiva ⇒ $\mathbb{N}\preccurlyeq\mathbb{Z}$ (**F10**) |
+| $\mathbb{Z}$ es enumerable | **F1**: contable + infinito (infinito porque $\mathbb{N}\preccurlyeq\mathbb{Z}$) |
+| $\mathbb{Q}\preccurlyeq\mathbb{Z}\times\mathbb{Z}$ | fracción **irreducible con denominador positivo**: $q\mapsto(p,r)$, inyectiva por unicidad de esa representación |
+| $\mathbb{Q}$ es enumerable | **F9** + (a) + **F1** |
 
 $$
 A\cup B\ \text{contable}:\quad
@@ -433,7 +469,36 @@ $$
 4. **Para sucesiones finitas:** inducir en $n$ usando $A^{n+1}\approx A^{n}\times A$ y que el producto de contables es contable.
 5. **Verificar** que la función construida es realmente inyectiva (el punto que siempre se salta).
 
-**Plantilla:** $\mathbb Q$ enumerable. La aplicación $\frac{p}{q}\mapsto(p,q)\in\mathbb Z\times\mathbb Z$ (fracción irreducible) es inyectiva; $\mathbb Z\times\mathbb Z\approx\mathbb N\times\mathbb N\approx\mathbb N$; luego $\mathbb Q$ es contable, y $\mathbb N\preccurlyeq\mathbb Q$ (los enteros están dentro), así que $\mathbb Q$ es infinito ⇒ enumerable. ✔️
+**Plantilla A — $\mathbb{N}\times\mathbb{N}\approx\mathbb{N}$ (dos inyecciones + Cantor–Bernstein):**
+
+1. $\iota(n)=(n,0)$ es inyectiva $\Rightarrow \mathbb{N}\preccurlyeq\mathbb{N}\times\mathbb{N}$.
+2. $\Psi(n,m)=2^{\,n+1}3^{\,m+1}$ es inyectiva, **leyendo los exponentes con la TFA** $\Rightarrow \mathbb{N}\times\mathbb{N}\preccurlyeq\mathbb{N}$.
+3. Cantor–Bernstein cierra $\Rightarrow \mathbb{N}\times\mathbb{N}\approx\mathbb{N}$.
+
+⚠️ $\Psi$ **no** es sobreyectiva ($5$ no tiene preimagen). No se necesita.
+
+**Plantilla B — $\mathbb{Q}$ enumerable (cadena completa):**
+
+$$
+\mathbb{Q}\ \preccurlyeq\ \mathbb{Z}\times\mathbb{Z}\ \preccurlyeq\ \mathbb{N}\times\mathbb{N}\ \approx\ \mathbb{N}
+\quad\left(\text{fracción irreducible};\ \textbf{F9};\ \text{Plantilla A}\right)
+$$
+
+$$
+\Longrightarrow\ \mathbb{Q}\ \preccurlyeq\ \mathbb{N}
+\quad\left(\text{transitividad, \textbf{F2}}\right)
+$$
+
+$$
+\mathbb{N}\ \preccurlyeq\ \mathbb{Q}\ \wedge\ \mathbb{Q}\ \text{es infinito}
+\quad\left(\text{\textbf{F10}};\ \textbf{F4}\right)
+$$
+
+$$
+\Longrightarrow\ \mathbb{Q}\ \approx\ \mathbb{N}
+\quad\left(\textbf{F1}:\ \text{contable + infinito}\right)
+$$
+
 
 ### G. Probar que un conjunto es NO contable
 
