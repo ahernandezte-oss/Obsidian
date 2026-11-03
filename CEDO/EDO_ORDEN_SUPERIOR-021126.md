@@ -250,11 +250,13 @@ $$
 - Polinomio → no hay exponencial ($a = 0$) ni frecuencia ($b = 0$) → $\lambda_0 = 0$.
 - Solo coseno/seno → $a = 0$ → $\lambda_0 = bi$.
 
-**Atajo para el polinomio:** $P(0)$ es el término independiente del polinomio característico, es decir **el coeficiente de $y$**. Por eso:
+**Atajo para el polinomio:** $P(0)$ es el término independiente del polinomio característico, y ese término es exactamente el coeficiente de $y$:
 
-$$P(0) = 0 \iff \text{la EDO no tiene término en } y \;(\text{falta } a_0)$$
+$$
+P(0) = a_0
+$$
 
-y en ese caso la constante ya está en $y_h$.
+De modo que $P(0) = 0$ equivale a que la EDO **no tenga término en $y$**; en ese caso la constante ya está en $y_h$ y hay que subir a $x$.
 
 #### 2. Cuántas $x$ se multiplican (multiplicidad)
 
