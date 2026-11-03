@@ -1,12 +1,12 @@
 # 📘 CHEATSHEET — TEORÍA DE CONJUNTOS · 22/10/2026
 
 > **🧾 FICHA DEL ARCHIVO**
-> - **Archivo:** `CORTADURAS_Y_REALES-221026.md`
+> - **Archivo:** `261022_CORTADURAS_Y_REALES.md`
 > - **Fecha de transcripción:** 22/10/2026 (`DDMMAA` = `221026`)
 > - **Tema principal:** CORTADURAS DE DEDEKIND (versión "hacia arriba") y construcción de $\mathbb R$: definición de número real con cuatro condiciones, orden por contenencia inversa, unión = ínfimo, reales racionales e irracionales, suma, lema de aproximación, opuesto aditivo y paso al supremo.
-> - **Continuidad:** toma de `RECURSION_COMPLETA_Y_SISTEMAS_DE_PEANO-201026` las construcciones de $\mathbb Z$ y $\mathbb Q$ (§2.D–§2.E) y la noción de campo ordenado con conjunto de positivos (§2.F). Aquí **no se repiten**: solo se citan. Esta clase es la continuación directa de esa.
+> - **Continuidad:** toma de `261020_RECURSION_COMPLETA_Y_SISTEMAS_DE_PEANO` las construcciones de $\mathbb Z$ y $\mathbb Q$ (§2.D–§2.E) y la noción de campo ordenado con conjunto de positivos (§2.F). Aquí **no se repiten**: solo se citan. Esta clase es la continuación directa de esa.
 > - **Fuente:** transcripción de clase. Lo agregado o corregido por mí va marcado con `➕`.
-> - **Cómo citarla al resolver ejercicios:** «📘 Cheatsheet `CORTADURAS_Y_REALES-221026` §2.B».
+> - **Cómo citarla al resolver ejercicios:** «📘 Cheatsheet `261022_CORTADURAS_Y_REALES` §2.B».
 
 **📎 Prerrequisitos:** $\mathbb Q$ es un campo ordenado denso y arquimediano (`201026` §2.E–§2.F); $\mathbb Z$ no es acotado en $\mathbb Q$; en un campo ordenado hay copias de $\mathbb N$, de $\mathbb Z$ y de $\mathbb Q$.
 

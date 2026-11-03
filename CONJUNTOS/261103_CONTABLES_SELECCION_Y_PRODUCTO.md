@@ -1,12 +1,12 @@
 # 📘 CHEATSHEET — TEORÍA DE CONJUNTOS · 03/11/2026
 
 > **🧾 FICHA DEL ARCHIVO**
-> - **Archivo:** `CONTABLES_SELECCION_Y_PRODUCTO-031126.md`
+> - **Archivo:** `261103_CONTABLES_SELECCION_Y_PRODUCTO.md`
 > - **Fecha de transcripción:** 03/11/2026 (`DDMMAA` = `031126`)
 > - **Tema principal:** CONTABLES · FUNCIONES SELECTORAS (elección finita) · PRODUCTO CARTESIANO GENERALIZADO. Incluye el cierre de cardinales finitos: $\left\lvert B^{A}\right\rvert$, soporte de $A^{B}$ y carácter finito.
-> - **Continuidad:** NO repite lo de `CARDINALIDAD_Y_FINITUD-291026` (equipotencia, dominancia, Cantor, punto fijo, Cantor–Bernstein, definición de finito y cardinal). Solo lo **cita**.
+> - **Continuidad:** NO repite lo de `261029_CARDINALIDAD_Y_FINITUD` (equipotencia, dominancia, Cantor, punto fijo, Cantor–Bernstein, definición de finito y cardinal). Solo lo **cita**.
 > - **Fuente:** transcripción de clase. Lo agregado (o corregido) por mí va marcado con `➕`.
-> - **Cómo citarla al resolver ejercicios:** «📘 Cheatsheet `CONTABLES_SELECCION_Y_PRODUCTO-031126` §2.F».
+> - **Cómo citarla al resolver ejercicios:** «📘 Cheatsheet `261103_CONTABLES_SELECCION_Y_PRODUCTO` §2.F».
 
 **📎 Prerrequisitos (de la cheatsheet anterior):** $A\approx B$ (equipotencia), $A\preccurlyeq B$ / $A\prec B$ (dominancia), $A$ finito $\iff\exists n\in\mathbb N:A\approx n$, $\lvert A\rvert$ = único $n$ con $A\approx n$, Cantor $A\prec\mathcal P(A)$, Cantor–Bernstein $\left(A\preccurlyeq B\wedge B\preccurlyeq A\Rightarrow A\approx B\right)$.
 

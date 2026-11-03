@@ -1,13 +1,13 @@
 # 📘 CHEATSHEET — TEORÍA DE CONJUNTOS · 27/10/2026
 
 > **🧾 FICHA DEL ARCHIVO**
-> - **Archivo:** `MULTIPLICACION_Y_UNICIDAD_DE_R-271026.md`
+> - **Archivo:** `261027_MULTIPLICACION_Y_UNICIDAD_DE_R.md`
 > - **Fecha de transcripción:** 27/10/2026 (`DDMMAA` = `271026`)
 > - **Tema principal:** MULTIPLICACIÓN DE REALES (primero solo en $\mathbb R^{+}$, después ley de signos), $\mathbb R$ como **campo ordenado completo** y **teorema de unicidad**: todo campo ordenado completo es isomorfo a $\mathbb R$. Al final, **adelanto** de equipotencia, dominancia y $\mathcal P(A)\approx2^{A}$.
-> - **Continuidad:** cierra lo que `CORTADURAS_Y_REALES-221026` dejó abierto (§3.6 de aquella: "falta la multiplicación"). Usa de allí la suma, el opuesto aditivo (§2.H), la unión $=$ ínfimo (§2.D) y el **lema de aproximación** (§2.G). Usa de `RECURSION_COMPLETA_Y_SISTEMAS_DE_PEANO-201026` los sistemas de Peano (§2.C). **No repite** nada de esas dos: solo lo cita.
-> - **Cuidado con el solapamiento:** el bloque final de equipotencia es el **inicio** del tema que `CARDINALIDAD_Y_FINITUD-291026` desarrolla completo (§2.A–§2.B). Aquí solo se registra lo nuevo de esta clase (§2.I).
+> - **Continuidad:** cierra lo que `261022_CORTADURAS_Y_REALES` dejó abierto (§3.6 de aquella: "falta la multiplicación"). Usa de allí la suma, el opuesto aditivo (§2.H), la unión $=$ ínfimo (§2.D) y el **lema de aproximación** (§2.G). Usa de `261020_RECURSION_COMPLETA_Y_SISTEMAS_DE_PEANO` los sistemas de Peano (§2.C). **No repite** nada de esas dos: solo lo cita.
+> - **Cuidado con el solapamiento:** el bloque final de equipotencia es el **inicio** del tema que `261029_CARDINALIDAD_Y_FINITUD` desarrolla completo (§2.A–§2.B). Aquí solo se registra lo nuevo de esta clase (§2.I).
 > - **Fuente:** transcripción de clase. Lo agregado o corregido por mí va marcado con `➕`.
-> - **Cómo citarla al resolver ejercicios:** «📘 Cheatsheet `MULTIPLICACION_Y_UNICIDAD_DE_R-271026` §2.C».
+> - **Cómo citarla al resolver ejercicios:** «📘 Cheatsheet `261027_MULTIPLICACION_Y_UNICIDAD_DE_R` §2.C».
 
 **📎 Prerrequisitos:** $\mathbb R$ con la suma es grupo abeliano; $\mathbb R^{+}$ es cerrado bajo la suma; orden por contenencia inversa ($A\le B\iff B\subseteq A$); $\inf M=\bigcup M$; lema de aproximación de `221026` §2.G; sistemas de Peano de `201026` §2.C.
 
@@ -26,7 +26,7 @@
 5. **Paso 4 — ¿Producto de reales de signos cualesquiera?** → árbol de signos + ley de signos heredada de la distributividad (§2.D, §4.B).
 6. **Paso 5 — ¿Piden "$\mathbb R$ es campo ordenado completo"?** → lista de axiomas uno por uno (§2.E, §4.D).
 7. **Paso 6 — ¿Piden "el único campo ordenado completo"?** → isomorfismo: copias de $\mathbb N,\mathbb Z,\mathbb Q$, cortaduras en el campo, ínfimo (§2.F–§2.H, §4.E).
-8. **Paso 7 — ¿Aparecen "equipotente", "dominancia", "$2^{A}$", "función característica"?** → §2.I (adelanto) y el desarrollo completo en `CARDINALIDAD_Y_FINITUD-291026`.
+8. **Paso 7 — ¿Aparecen "equipotente", "dominancia", "$2^{A}$", "función característica"?** → §2.I (adelanto) y el desarrollo completo en `261029_CARDINALIDAD_Y_FINITUD`.
 
 **Tabla de decisión:**
 
@@ -247,7 +247,7 @@ $$
 - $\chi_B$: **función característica** de $B$; "dónde está cada elemento" codificado con $0$ y $1$.
 - $H$ biyectiva: inyectiva porque $\chi_B=\chi_C\Rightarrow B=C$; sobreyectiva porque $f\mapsto f^{-1}[\{1\}]$ deshace.
 - $g\circ h\circ f^{-1}$: la fórmula general para transportar una función por dos biyecciones; es el molde de todos los transportes.
-- Estos temas se desarrollan completos en `CARDINALIDAD_Y_FINITUD-291026` §2.A–§2.B: aquí solo queda registrado el punto de partida.
+- Estos temas se desarrollan completos en `261029_CARDINALIDAD_Y_FINITUD` §2.A–§2.B: aquí solo queda registrado el punto de partida.
 
 ---
 
@@ -428,6 +428,6 @@ $$
 | $A+(-A)=0_{\mathbb R}$ para la resta y las identidades $(-A)\cdot B=-(A\cdot B)$, $(-A)\cdot(-B)=A\cdot B$ | ejercicios (dos de los tres) |
 | Detalles de la sobreyectividad de $G$ en el teorema de unicidad | esbozados en §2.H y §4.E; el profe los dio "esquemáticos" |
 | Modelos alternativos de $\mathbb R$ (cortaduras, sucesiones de Cauchy, vía $\mathbb Q^{+}\cup\{0\}\to\mathbb R^{+}\cup\{0\}$) | §2.F: todos isomorfos por el teorema de unicidad |
-| **Equipotencia y dominancia** en serio: reflexiva, simétrica, transitiva; $\mathcal P(A)\approx2^{A}$; transportes | §2.I (inicio) y `CARDINALIDAD_Y_FINITUD-291026` §2.A–§2.B (completo) |
+| **Equipotencia y dominancia** en serio: reflexiva, simétrica, transitiva; $\mathcal P(A)\approx2^{A}$; transportes | §2.I (inicio) y `261029_CARDINALIDAD_Y_FINITUD` §2.A–§2.B (completo) |
 | No se puede definir **cardinal** con los siete axiomas actuales | hace falta añadir dos axiomas más; §2.I |
 | Ejercicios sueltos de la pizarra sobre $\bigcup\mathcal C$ transitivo y uniones de productos | quedaron sin enunciar con claridad en la transcripción |

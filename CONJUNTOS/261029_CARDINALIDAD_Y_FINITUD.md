@@ -1,11 +1,11 @@
 # 📘 CHEATSHEET — TEORÍA DE CONJUNTOS · 29/10/2026
 
 > **🧾 FICHA DEL ARCHIVO**
-> - **Archivo:** `CARDINALIDAD_Y_FINITUD-291026.md`
+> - **Archivo:** `261029_CARDINALIDAD_Y_FINITUD.md`
 > - **Fecha de transcripción:** 29/10/2026 (`DDMMAA` = `291026`)
 > - **Tema principal:** CARDINALIDAD — potenciación cardinal (5.4) · dominancia (5.6) · Cantor (5.8) · punto fijo de conjuntos · Cantor–Bernstein–Schröder (5.11) · finitud y cardinal finito
 > - **Fuente:** transcripción de clase (clase completa). Lo que **no** viene de la transcripción va marcado con `➕`.
-> - **Cómo citarla al resolver ejercicios:** «📘 Cheatsheet `CARDINALIDAD_Y_FINITUD-291026` §2.D».
+> - **Cómo citarla al resolver ejercicios:** «📘 Cheatsheet `261029_CARDINALIDAD_Y_FINITUD` §2.D».
 
 ---
 

@@ -1,12 +1,12 @@
 # 📘 CHEATSHEET — TEORÍA DE CONJUNTOS · 15/10/2026
 
 > **🧾 FICHA DEL ARCHIVO**
-> - **Archivo:** `RECURSION_SIMPLE_Y_PARAMETRICA-151026.md`
+> - **Archivo:** `261015_RECURSION_SIMPLE_Y_PARAMETRICA.md`
 > - **Fecha de transcripción:** 15/10/2026 (`DDMMAA` = `151026`)
 > - **Tema principal:** RECURSIÓN — antecesor, recursión finita e infinita, teoremas de restricción ($3.29$ y $3.30$), existencia y unicidad de la recursión finita ($3.31$), teorema de la recursión simple ($3.32$), recursión paramétrica y su uso para definir suma, multiplicación, potenciación y factorial.
-> - **Continuidad:** esta clase es **anterior** en el calendario a `CARDINALIDAD_Y_FINITUD-291026` y a `CONTABLES_SELECCION_Y_PRODUCTO-031126`. No repite nada de ellas, pero es la máquina que ambas usan: el cardinal finito $\lvert A\rvert$, los conteos por bloques y las sucesiones de apoyo salen de aquí.
+> - **Continuidad:** esta clase es **anterior** en el calendario a `261029_CARDINALIDAD_Y_FINITUD` y a `261103_CONTABLES_SELECCION_Y_PRODUCTO`. No repite nada de ellas, pero es la máquina que ambas usan: el cardinal finito $\lvert A\rvert$, los conteos por bloques y las sucesiones de apoyo salen de aquí.
 > - **Fuente:** transcripción de clase. Lo agregado o corregido por mí va marcado con `➕`.
-> - **Cómo citarla al resolver ejercicios:** «📘 Cheatsheet `RECURSION_SIMPLE_Y_PARAMETRICA-151026` §2.F».
+> - **Cómo citarla al resolver ejercicios:** «📘 Cheatsheet `261015_RECURSION_SIMPLE_Y_PARAMETRICA` §2.F».
 
 **📎 Prerrequisitos:** naturales de von Neumann ($0=\emptyset$, $n^{+}=n\cup\{n\}$, antecesor $n^{-}=\bigcup n$), inducción, transitividad de los naturales ($m\in n\Rightarrow m\subseteq n$), y la idea intuitiva "el siguiente se calcula con el anterior".
 
