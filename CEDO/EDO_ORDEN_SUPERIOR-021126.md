@@ -181,19 +181,36 @@ $$
 
 ### G. ➕ Fórmula de operador (evita re-derivar en cada ejercicio)
 
-Para $y = e^{ax}\left(A\cos bx + B\sin bx\right)$ en una EDO $y'' + py' + qy = g(x)$ con $p, q$ constantes:
+**Regla general (sirve para cualquier orden).** Sea $L$ el operador de la EDO y $P(\lambda)$ su polinomio característico. Para
 
 $$
-y'' + py' + qy = e^{ax}\Big[\left(K_1A + K_2B\right)\cos bx + \left(K_1B - K_2A\right)\sin bx\Big]
+y = e^{ax}\left(A\cos bx + B\sin bx\right)
 $$
 
-donde
+se calcula el número complejo $K_1 + K_2\,i = P(a + bi)$ y entonces
+
+$$
+L[y] = e^{ax}\Big[\left(K_1A + K_2B\right)\cos bx + \left(K_1B - K_2A\right)\sin bx\Big]
+$$
+
+**Por qué funciona:** $D^{j}\left[e^{\mu x}\right] = \mu^{j}e^{\mu x}$, luego $L\left[e^{\mu x}\right] = P(\mu)e^{\mu x}$. Con $\mu = a+bi$ y tomando parte real sale la fórmula.
+
+**Si hay choque** ($P(a+bi) = 0$) se usa la derivada del polinomio:
+
+$$
+L\left[x\,e^{ax}\left(C\cos bx + D\sin bx\right)\right] = e^{ax}\Big[\left(\Phi_1C + \Phi_2D\right)\cos bx + \left(\Phi_1D - \Phi_2C\right)\sin bx\Big],
+\qquad \Phi_1 + \Phi_2\,i = P'(a+bi)
+$$
+
+**Generalización:** si $\lambda_0$ es raíz de multiplicidad $m$, entonces $L\left[x^me^{\lambda_0 x}\right] = P^{(m)}(\lambda_0)\,e^{\lambda_0 x}$. Esa es la razón por la que la corrección por $x^m$ de la tabla de multiplicidad de §3 funciona.
+
+**Caso 2.º orden, explícito** — con $y'' + py' + qy = g(x)$:
 
 $$
 K_1 = a^2 - b^2 + pa + q, \qquad K_2 = 2ab + pb
 $$
 
-Derivadas sueltas (si se necesitan):
+Derivadas sueltas del caso 2.º orden, si se necesitan:
 
 $$
 y' = e^{ax}\Big[\left(aA + bB\right)\cos bx + \left(aB - bA\right)\sin bx\Big]
@@ -205,14 +222,16 @@ $$
 
 **Cómo se usa:** se calculan $K_1$ y $K_2$ **una sola vez** y el sistema de coeficientes sale directo, sin derivar término por término.
 
+**Caso exponencial puro** ($b = 0$, $y_p = Ae^{ax}$): $K_1 = P(a)$, $K_2 = 0$ → $L[y_p] = K_1A\,e^{ax}$.
+
 **🔤 Diccionario:**
 - $a$: exponente de la exponencial (coeficiente de $x$ en $e^{ax}$).
 - $b$: frecuencia (coeficiente de $x$ en $\cos bx$ y $\sin bx$).
 - $p, q$: coeficientes constantes de $y'$ e $y$ en la EDO (con signo).
-- $K_1, K_2$: **números** que se calculan con la fórmula. No son las constantes $C_1, C_2$ de $y_h$.
+- $K_1, K_2$: parte real e imaginaria de $P(a+bi)$; son **números**, no las constantes $C_1, C_2$ de $y_h$.
+- $\Phi_1, \Phi_2$: parte real e imaginaria de $P'(a+bi)$; se usan cuando hay choque.
+- $P^{(m)}$: derivada $m$-ésima del polinomio característico respecto de $\lambda$.
 - $A, B$: los coeficientes indeterminados que se despejan.
-
-**Caso exponencial puro** ($b = 0$, $g = Ce^{ax}$, $y_p = Ae^{ax}$): queda $K_1 = a^2 + pa + q$ y $K_2 = 0$, así que $y'' + py' + qy = K_1A\,e^{ax}$.
 
 ---
 
