@@ -70,9 +70,14 @@ $$
 |---|---|---|
 | **1** | Reales y distintas $\lambda_1, \ldots, \lambda_n$ | $C_1e^{\lambda_1 x} + C_2e^{\lambda_2 x} + \cdots + C_ne^{\lambda_n x}$ |
 | **2** | Real $\lambda$ con multiplicidad $k$ | $(C_1 + C_2x + \cdots + C_kx^{k-1})e^{\lambda x}$ |
-| **3** | Complejas $\alpha \pm \beta i$ | $e^{\alpha x}(C_1\cos\beta x + C_2\sin\beta x)$ |
+| **3** | Complejas $\alpha \pm \beta i$ simples | $e^{\alpha x}(C_1\cos\beta x + C_2\sin\beta x)$ |
+| **4** | Complejas $\alpha \pm \beta i$ con multiplicidad $k$ | $e^{\alpha x}\Big[\left(C_1 + \cdots + C_kx^{k-1}\right)\cos\beta x + \left(C_{k+1} + \cdots + C_{2k}x^{k-1}\right)\sin\beta x\Big]$ |
 
-**Fórmula de Euler:**
+**Cómo se reconoce el caso 4:** el factor de la característica aparece como $\left(\lambda^2 - 2\alpha\lambda + \alpha^2 + \beta^2\right)^k$. Lo más rápido es **factorizar en potencias** (por ejemplo $\lambda^4 + 2\lambda^2 + 1 = \left(\lambda^2+1\right)^2$) y leer el exponente.
+
+**Caso 4 con $\alpha = 0$** (el que más aparece): $\left(\lambda^2 + \beta^2\right)^k$ → cada una de las dos funciones lleva el factor completo $1, x, \ldots, x^{k-1}$. Con $k = 2$: $\left(C_1 + C_2x\right)\cos\beta x + \left(C_3 + C_4x\right)\sin\beta x$, es decir **cuatro** constantes.
+
+**Fórmula de Euler** (origen de los casos 3 y 4):
 
 $$
 e^{(\alpha \pm \beta i)x} = e^{\alpha x}\left(\cos\beta x \pm i\sin\beta x\right)
@@ -82,7 +87,7 @@ $$
 - $\lambda$: raíz de la ecuación característica.
 - $\alpha$: parte real de la raíz compleja.
 - $\beta$: parte imaginaria de la raíz compleja.
-- $k$: multiplicidad (cuántas veces se repite la raíz).
+- $k$: multiplicidad (cuántas veces se repite la raíz). En el caso 4 el par $\alpha \pm \beta i$ aporta $2k$ constantes.
 - $i$: unidad imaginaria ($i^2 = -1$).
 - $e$: constante de Euler (≈ $2{,}71828$).
 
@@ -224,6 +229,8 @@ $$
 
 **Caso exponencial puro** ($b = 0$, $y_p = Ae^{ax}$): $K_1 = P(a)$, $K_2 = 0$ → $L[y_p] = K_1A\,e^{ax}$.
 
+**Caso trigonométrico puro** ($a = 0$): $K_1 + K_2i = P(bi)$, que es un número **real** siempre que el grado de $P$ sea par; si el grado es impar, $P(bi)$ es imaginario puro. En ambos casos la fórmula de arriba sigue siendo válida.
+
 **🔤 Diccionario:**
 - $a$: exponente de la exponencial (coeficiente de $x$ en $e^{ax}$).
 - $b$: frecuencia (coeficiente de $x$ en $\cos bx$ y $\sin bx$).
@@ -239,8 +246,8 @@ $$
 
 | Caso | Situación | Qué hacer | 👉 Ir a |
 |---|---|---|---|
-| **Caso 0** | Raíz repetida con multiplicidad $k$ | Añadir $x, x^2, \ldots, x^{k-1}$ junto a $e^{\lambda x}$ | §2.B caso 2 |
-| **Caso 1** | Raíz compleja $\alpha \pm \beta i$ | Siempre en pares conjugados → $e^{\alpha x}(\cos\beta x, \sin\beta x)$ | §2.B caso 3 |
+| **Caso 0** | Raíz real repetida con multiplicidad $k$ | Añadir $x, x^2, \ldots, x^{k-1}$ junto a $e^{\lambda x}$ | §2.B caso 2 |
+| **Caso 1** | Raíz compleja $\alpha \pm \beta i$ | Par conjugado → $e^{\alpha x}(\cos\beta x, \sin\beta x)$; si se repite $k$ veces, el factor $1, x, \ldots, x^{k-1}$ va en **las dos** funciones | §2.B casos 3 y 4 |
 | **Caso 2** | Choque: la conjetura coincide con $y_h$ | Multiplicar **todo el bloque** por $x$ (por $x^2$ si se repite) | §2.E |
 | **Caso 3** | Wronskiano $= 0$ | Caso singular → no es conjunto fundamental → recalcular | §2.D |
 | **Caso 4** | Falta el término $y$ o alguna derivada | Factorizar $\lambda$ → $\lambda = 0$ es raíz → aporta constante $C$ | §2.B |
