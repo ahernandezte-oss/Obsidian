@@ -29,6 +29,7 @@
 | La conjetura de $y_p$ ya aparece en $y_h$ | Choque (Caso 2) | multiplicar el bloque por $x$ | §2.E regla del conjunto · §3 Criterio del choque |
 | Falta el término $y$ o alguna derivada | Factorizar $\lambda$ (Caso 4) | $\lambda = 0$ es raíz → aporta constante | §3 Caso 4 · §3 Criterio del choque |
 | $g(x)$ trae un polinomio (por ejemplo $2x$) | Probar $\lambda_0 = 0$ | si $P(0) = 0$ hay choque → $x^m$ | §2.E columna $\lambda_0$ · §3 |
+| $g(x)$ trae $\sin 3x\cos 2x$ (producto de frecuencias distintas) | Convertir a suma **antes** de todo | $\sin A\cos B = \frac{1}{2}\left[\sin(A+B)+\sin(A-B)\right]$ | §2.E identidades producto-suma |
 | $g(x)$ trae $\sin(bx)$ o $\cos(bx)$ | Seno y coseno **siempre juntos** (Caso 7) | $A\cos bx + B\sin bx$ | §2.E · §3 Caso 7 |
 
 **Frases literales del profesor (para identificar el método):**
@@ -151,14 +152,33 @@ $$
 | $x^ne^{ax}$ | $\{x^ne^{ax}, \ldots, x e^{ax}, e^{ax}\}$ | $\left(A_nx^n + \cdots + A_0\right)e^{ax}$ | $a$ |
 | $x^n\cos(bx)$ o $x^n\sin(bx)$ | $\{x^n\cos bx, \ldots, \cos bx, \sin bx\}$ | $\left(A_nx^n + \cdots + A_0\right)\cos bx + \left(B_nx^n + \cdots + B_0\right)\sin bx$ | $bi$ |
 
-**Reglas de combinación:** producto de términos → **multiplicar** conjeturas · suma de términos → **sumar** conjeturas.
+**Reglas de combinación:** producto de términos → **multiplicar** conjeturas · suma de términos → **sumar** conjeturas · **producto de senos y cosenos de frecuencias distintas → primero convertir a suma** (ver abajo).
+
+**Identidades producto-suma ➕ (obligatorias antes de elegir la familia)**
+
+$$
+\sin A\cos B = \frac{1}{2}\Big[\sin\left(A+B\right) + \sin\left(A-B\right)\Big]
+$$
+
+$$
+\sin A\sin B = \frac{1}{2}\Big[\cos\left(A-B\right) - \cos\left(A+B\right)\Big]
+$$
+
+$$
+\cos A\cos B = \frac{1}{2}\Big[\cos\left(A-B\right) + \cos\left(A+B\right)\Big]
+$$
+
+**Por qué son obligatorias:** la familia de $\sin 3x\cos 2x$ **no** es $\{x\text{-trig}\}$ ni el producto de dos familias de 2 elementos (eso daría 8 funciones mal organizadas); es la suma de las familias de $\sin 5x$ y de $\sin x$. Si no se convierten, la conjetura de $y_p$ no cubre $g(x)$ y el sistema no tiene solución.
+
+⚠️ **Estas identidades no se aplican** a productos donde uno de los factores es $x^n$ o $e^{ax}$ (esos sí se resuelven con la fila correspondiente de la tabla): se aplican solo entre senos y cosenos.
 
 **Pasos (regla del conjunto):**
-1. Localiza cada término de $g(x)$ en la tabla y anota **su familia y su $\lambda_0$**.
-2. Si dos términos comparten familia (por ejemplo $e^{3x}\cos x$ y $e^{3x}\sin x$), es **una sola conjetura**, no dos.
-3. Prueba el choque con el $\lambda_0$ anotado → criterio en **§3 Criterio del choque**.
-4. Si hay choque, multiplica **todo el bloque** por $x^m$ ($m$ = multiplicidad, §3).
-5. $y_p$ = suma de las conjeturas, con coeficientes desconocidos.
+1. **Normaliza $g(x)$**: desarrolla paréntesis y convierte todo producto $\sin\cdot\cos$ a suma.
+2. Localiza cada término en la tabla y anota **su familia y su $\lambda_0$**.
+3. Si dos términos comparten familia (por ejemplo $e^{3x}\cos x$ y $e^{3x}\sin x$), es **una sola conjetura**, no dos.
+4. Prueba el choque con el $\lambda_0$ anotado → criterio en **§3 Criterio del choque**.
+5. Si hay choque, multiplica **todo el bloque** por $x^m$ ($m$ = multiplicidad, §3).
+6. $y_p$ = suma de las conjeturas, con coeficientes desconocidos.
 
 **🔤 Diccionario:**
 - $A, B, C, D, \ldots$: coeficientes desconocidos a determinar (NO son las constantes $C_1, C_2$ de $y_h$).
