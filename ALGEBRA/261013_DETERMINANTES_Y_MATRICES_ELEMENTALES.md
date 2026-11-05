@@ -91,7 +91,7 @@ $$\operatorname{adj}(A)=\big(C_{ij}\big)^{\top}$$
 **🔤 Diccionario:** $E$ matriz elemental (una sola operación de fila aplicada a $I_n$) · $k$ escalar no nulo en el escalamiento · toda $E$ es invertible y $E^{-1}$ es del mismo tipo.
 
 ### E. Inversa
-$$\big[A\mid I\big]\;\longrightarrow\;\big[I\mid A^{-1}\big]\qquad\text{(Gauss-Jordan)}$$
+$$\big[A\mid I\big]\;\longrightarrow\;\big[I\mid A^{-1}\big]\qquad\text{Gauss-Jordan}$$
 $$A^{-1}=\frac{1}{\det A}\,\operatorname{adj}(A)\qquad(\det A\neq 0)$$
 **🔤 Diccionario:** $[A\mid I]$ matriz aumentada · $\operatorname{adj}(A)$ adjunta · la fórmula exige $\det A\neq 0$.
 
