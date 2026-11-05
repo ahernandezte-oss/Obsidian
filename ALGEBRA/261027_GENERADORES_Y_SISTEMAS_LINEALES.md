@@ -119,7 +119,7 @@ $$(2,3)=-(1,2)+(3,5)\;\Rightarrow\;(2,3)\in\operatorname{Gen}$$
 3. Repetir hasta que ninguno sea combinación.
 
 **Plantilla:** $\{(1,2),(2,4)\}$: $(2,4)=2(1,2)$ ⇒
-$$\operatorname{Gen}\{(1,2),(2,4)\}=\operatorname{Gen}\{(1,2)\}\ \text{(una recta)}$$
+$$\operatorname{Gen}\{(1,2),(2,4)\}=\operatorname{Gen}\{(1,2)\}\ \text{una recta}$$
 
 ### 4.4 Decidir LI o LD
 1. Escribir $A\alpha=0$ con columnas los vectores.
