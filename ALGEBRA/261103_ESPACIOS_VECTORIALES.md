@@ -2,11 +2,11 @@
 
 | Ficha | Valor |
 |---|---|
-| **Archivo** | `ESPACIOS_VECTORIALES-031126.md` |
+| **Archivo** | `261103_ESPACIOS_VECTORIALES.md` |
 | **Tema principal** | Espacios vectoriales (subespacios, base, coordenadas, dimensión) |
 | **Fecha base** | 03/11/2026 (transcripción de clase 13) |
 | **Fuente** | Transcripción clase 13 + apuntes `Vectorial_spaces_1.pdf` (sec. 4.1–4.4) |
-| **Cómo citarla** | «📘 Cheatsheet `ESPACIOS_VECTORIALES-031126` §2.B» |
+| **Cómo citarla** | «📘 Cheatsheet `261103_ESPACIOS_VECTORIALES` §2.B» |
 | **Notación** | vectores $u,v,w$ · escalares $c,a,b,\alpha,\beta\in\mathbb{R}$ · generador $\operatorname{Gen}\{\dots\}$ · base $\mathcal{B}$ · coordenadas $[v]_{\mathcal{B}}$ · dimensión $\dim V$ |
 
 > ➕ = añadido/sintetizado (no literal de la fuente).
