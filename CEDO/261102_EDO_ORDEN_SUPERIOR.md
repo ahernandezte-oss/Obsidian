@@ -1,11 +1,11 @@
 # 📘 CHEATSHEET — CEDO · 02/11/2026
 
 > **📇 Ficha del archivo**
-> - **Archivo:** `EDO_ORDEN_SUPERIOR-021126.md`
+> - **Archivo:** `261102_EDO_ORDEN_SUPERIOR.md`
 > - **Tema principal:** EDO lineales de orden superior con coeficientes constantes — coeficientes indeterminados + variación de parámetros
 > - **Fecha base:** 02/11/2026
 > - **Fuente:** `Tarea1-2.Parcial-2.ED.pdf` (22 ejercicios) + teoría estándar de coeficientes constantes (Zill, Boyce–DiPrima)
-> - **Cómo citarla al resolver:** «📘 Cheatsheet `EDO_ORDEN_SUPERIOR-021126` §2.E»
+> - **Cómo citarla al resolver:** «📘 Cheatsheet `261102_EDO_ORDEN_SUPERIOR` §2.E»
 > - **Notación:** la raíz característica se denota **$\lambda$** (no $m$).
 
 ---
@@ -143,14 +143,14 @@ $$
 
 **Tabla única.** Para cada término de $g(x)$: su familia de derivadas, la conjetura de $y_p$ y el número $\lambda_0$ con el que se prueba el choque (§3).
 
-| Término de $g(x)$                       | Familia (conjunto de derivadas)            | Conjetura $y_p$                                                                         | $\lambda_0$ de choque |
-| --------------------------------------- | ------------------------------------------ | --------------------------------------------------------------------------------------- | --------------------- |
-| $x^n$ (polinomio)                       | $\{x^n, x^{n-1}, \ldots, x, 1\}$           | $A_nx^n + \cdots + A_1x + A_0$                                                          | $\mathbf{0}$          |
-| $C e^{ax}$                              | $\{e^{ax}\}$                               | $A e^{ax}$                                                                              | $a$                   |
-| $C\cos(bx)$ o $C\sin(bx)$               | $\{\cos bx, \sin bx\}$                     | $A\cos bx + B\sin bx$                                                                   | $bi$                  |
-| $C e^{ax}\cos(bx)$ o $C e^{ax}\sin(bx)$ | $\{e^{ax}\cos bx, e^{ax}\sin bx\}$         | $e^{ax}\left(A\cos bx + B\sin bx\right)$                                                | $a + bi$              |
-| $x^ne^{ax}$                             | $\{x^ne^{ax}, \ldots, x e^{ax}, e^{ax}\}$  | $\left(A_nx^n + \cdots + A_0\right)e^{ax}$                                              | $a$                   |
-| $x^n\cos(bx)$ o $x^n\sin(bx)$           | $\{x^n\cos bx, \ldots, \cos bx, \sin bx\}$ | $\left(A_nx^n + \cdots + A_0\right)\cos bx + \left(B_nx^n + \cdots + B_0\right)\sin bx$ | $bi$                  |
+| Término de $g(x)$ | Familia (conjunto de derivadas) | Conjetura $y_p$ | $\lambda_0$ de choque |
+|---|---|---|---|
+| $x^n$ (polinomio) | $\{x^n, x^{n-1}, \ldots, x, 1\}$ | $A_nx^n + \cdots + A_1x + A_0$ | $\mathbf{0}$ |
+| $C e^{ax}$ | $\{e^{ax}\}$ | $A e^{ax}$ | $a$ |
+| $C\cos(bx)$ o $C\sin(bx)$ | $\{\cos bx, \sin bx\}$ | $A\cos bx + B\sin bx$ | $bi$ |
+| $C e^{ax}\cos(bx)$ o $C e^{ax}\sin(bx)$ | $\{e^{ax}\cos bx, e^{ax}\sin bx\}$ | $e^{ax}\left(A\cos bx + B\sin bx\right)$ | $a + bi$ |
+| $x^ne^{ax}$ | $\{x^ne^{ax}, \ldots, x e^{ax}, e^{ax}\}$ | $\left(A_nx^n + \cdots + A_0\right)e^{ax}$ | $a$ |
+| $x^n\cos(bx)$ o $x^n\sin(bx)$ | $\{x^n\cos bx, \ldots, \cos bx, \sin bx\}$ | $\left(A_nx^n + \cdots + A_0\right)\cos bx + \left(B_nx^n + \cdots + B_0\right)\sin bx$ | $bi$ |
 
 **Reglas de combinación:** producto de términos → **multiplicar** conjeturas · suma de términos → **sumar** conjeturas · **producto de senos y cosenos de frecuencias distintas → primero convertir a suma** (ver abajo).
 
@@ -399,4 +399,4 @@ De modo que $P(0) = 0$ equivale a que la EDO **no tenga término en $y$**; en es
 
 ---
 
-**Cita rápida:** 📘 Cheatsheet `EDO_ORDEN_SUPERIOR-021126` — usa el bloque (`§2.B`, `§3 Caso 2`, `§4.2`…) al resolver cada ejercicio.
+**Cita rápida:** 📘 Cheatsheet `261102_EDO_ORDEN_SUPERIOR` — usa el bloque (`§2.B`, `§3 Caso 2`, `§4.2`…) al resolver cada ejercicio.
