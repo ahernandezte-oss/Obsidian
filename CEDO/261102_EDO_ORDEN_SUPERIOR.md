@@ -204,6 +204,8 @@ $$
 
 **🔤 Diccionario:** $u_i$: funciones que reemplazan a las constantes · $W_i$: Wronskiano modificado · $g(x)$: lado derecho ya normalizado · $p(x), q(x)$: coeficientes tras dividir por el término principal.
 
+**➜ Desarrollo completo** (sistema de $n$ condiciones, estructura de cada $W_i$, plantilla con $\tan x$ y reducción de determinantes): `261026_VARIACION_PARAMETROS`.
+
 ### G. ➕ Fórmula de operador (evita re-derivar en cada ejercicio)
 
 **Regla general (sirve para cualquier orden).** Sea $L$ el operador de la EDO y $P(\lambda)$ su polinomio característico. Para
