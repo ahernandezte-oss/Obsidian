@@ -1,18 +1,18 @@
 # 📘 CHEATSHEET — TEORÍA DE CONJUNTOS · 05/11/2026
 
 > **🧾 FICHA DEL ARCHIVO**
-> - **Archivo:** `AXIOMA_DE_ELECCION_EQUIVALENCIAS-051126.md`
-> - **Fecha de transcripción:** 05/11/2026 (`DDMMAA` = `051126`)
+> - **Archivo:** `261105_AXIOMA_DE_ELECCION.md`
+> - **Fecha de transcripción:** 05/11/2026 (`AAMMDD` = `261105`)
 > - **Tema principal:** AXIOMA DE ELECCIÓN — las 11 formas equivalentes (AC, 6.1–6.10) y los **esquemas de prueba** para pasar de una a otra.
-> - **Continuidad:** NO repite `CARDINALIDAD_Y_FINITUD-291026` (Cantor, punto fijo, Cantor–Bernstein, finitud) ni `CONTABLES_SELECCION_Y_PRODUCTO-031126` (contables, selectora, carácter finito, producto generalizado). Los **cita**.
+> - **Continuidad:** NO repite `261029_CARDINALIDAD_Y_FINITUD` (Cantor, punto fijo, Cantor–Bernstein, finitud) ni `261103_CONTABLES_SELECCION_Y_PRODUCTO` (contables, selectora, carácter finito, producto generalizado). Los **cita**.
 > - **Fuente:** transcripción de clase. Lo agregado o completado por mí va con `➕`.
-> - **Cómo citarla al resolver ejercicios:** «📘 Cheatsheet `AXIOMA_DE_ELECCION_EQUIVALENCIAS-051126` §2.A (forma 6.9)».
+> - **Cómo citarla al resolver ejercicios:** «📘 Cheatsheet `261105_AXIOMA_DE_ELECCION` §2.A (forma 6.9)».
 
 **📎 Prerrequisitos que se dan por sabidos:**
-- **Función selectora:** $g:\mathcal A\setminus\{\emptyset\}\to\bigcup\mathcal A$ con $g(A)\in A$ 📘 `-031126` §2.D.
-- **Elección finita es teorema** (inducción, sin axioma) 📘 `-031126` §2.D y §3.4.
-- **Carácter finito** y su teorema de la cadena 📘 `-031126` §2.E.
-- **Producto generalizado** $\prod_{i\in I}A_{i}$ 📘 `-031126` §2.H.
+- **Función selectora:** $g:\mathcal A\setminus\{\emptyset\}\to\bigcup\mathcal A$ con $g(A)\in A$ 📘 `261103_CONTABLES_SELECCION_Y_PRODUCTO` §2.D.
+- **Elección finita es teorema** (inducción, sin axioma) 📘 `261103_CONTABLES_SELECCION_Y_PRODUCTO` §2.D y §3.4.
+- **Carácter finito** y su teorema de la cadena 📘 `261103_CONTABLES_SELECCION_Y_PRODUCTO` §2.E.
+- **Producto generalizado** $\prod_{i\in I}A_{i}$ 📘 `261103_CONTABLES_SELECCION_Y_PRODUCTO` §2.H.
 - **Buen orden**, cota superior, maximal, cadena.
 
 ---
