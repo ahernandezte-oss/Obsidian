@@ -251,7 +251,7 @@ $$
 - [ ] ¿En tablas se usó `\frac` (no `\dfrac`) y `\vert`/`\mid` (no barras verticales sueltas)?
 - [ ] ¿Hay una plantilla mínima por algoritmo y ningún ejemplo decorativo?
 - [ ] ¿Está marcado con ➕ lo que se añadió y no venía de la clase?
-- [ ] ¿Se copió el espejo a `F:\NOTES\NOTAS DE CLASE\CEDO` con hash SHA256 idéntico?
+- [ ] ¿Se copió el espejo a `/storage/emulated/0/Download/arvhicos/02_NOTAS_OBSIDIAN/CEDO` con hash SHA256 idéntico?
 
 ---
 

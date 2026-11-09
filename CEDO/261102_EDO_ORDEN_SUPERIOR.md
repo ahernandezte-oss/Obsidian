@@ -397,7 +397,7 @@ De modo que $P(0) = 0$ equivale a que la EDO **no tenga término en $y$**; en es
 - [ ] ¿En las tablas se usó `\frac` (no `\dfrac`) y `\mid`/`\vert` (no el carácter de barra vertical)?
 - [ ] ¿Hay **una plantilla mínima por algoritmo** y ningún ejemplo decorativo?
 - [ ] ¿Está marcado con **➕** todo lo que se añadió y no venía de la fuente?
-- [ ] ¿Se copió la versión espejo a `F:\NOTES\NOTAS DE CLASE\CEDO` con **hash SHA256** idéntico?
+- [ ] ¿Se copió la versión espejo a `/storage/emulated/0/Download/arvhicos/02_NOTAS_OBSIDIAN/CEDO` con **hash SHA256** idéntico?
 
 ---
 
