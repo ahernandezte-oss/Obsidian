@@ -9,6 +9,7 @@
 | **Cómo citarla** | «📘 Cheatsheet `261105_ESPACIOS_VECTORIALES_ABSTRACTOS` §2.C» |
 | **Notación** | $V$ espacio vectorial · $P_n$ polinomios de grado $\le n$ · $M_{mn}$ matrices · $\mathcal{B}$ base · $\operatorname{Gen}S$ · LI/LD · $0_V$ cero del espacio |
 | **No repite** | definiciones en $\mathbb{R}^n$, base, coordenadas y dimensión → `261103`; caracterizaciones de LI y espacio nulo → `261029`; Gen ↔ $AX=B$ → `261027` |
+| **🔔 Sincronización** | Prueba de escritura desde Termux el 2026-11-09 · 09:2X Bogotá ✅ |
 
 > ➕ = añadido/sintetizado (no literal de la fuente).
 
