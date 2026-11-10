@@ -29,9 +29,9 @@
 |---|---|---|---|
 | "¿Es LI o LD?" | Sistema homogéneo | $\alpha_1v_1+\dots+\alpha_kv_k=0_V$ | §2.A · §4.1 |
 | "¿Alguno es combinación lineal de los anteriores?" | Teorema 7.3: reordenar con $v_1\ne0_V$ | $v_i\in\operatorname{Gen}\{v_1,\dots,v_{i-1}\}$ | §2.B · §4.2 |
-| "El conjunto contiene al $\vec0$" | Teorema 8.1 | LD inmediato | §2.C · §3 Caso 1 |
+| "El conjunto contiene al $\vec0$" | Teorema 8.1 | LD inmediato | §2.C · §3 Caso 5 |
 | "¿Es base de $V$?" | LI + genera | las dos condiciones | §2.E · §4.3 |
-| "¿La representación es única?" | Teorema 11 | $v=\sum c_iv_i$ con $c_i$ únicos | §2.G · §4.6 |
+| "¿La representación es única?" | Teorema 11 | $v=\sum c_iv_i$ con $c_i$ únicos | §2.G |
 | "Refutar que es base" | Contraejemplo | LD con coeficientes, o $v\notin\operatorname{Gen}$ | §3 Caso 4 · §4.4 |
 | "¿Cuántos vectores LI caben?" | Teorema 12 (Steinitz) | LI $\Rightarrow m\le n$ | §2.H · §4.5 |
 | "¿Todas las bases miden lo mismo?" | Teorema 13 | $\dim V=n$ | §2.I |
@@ -116,7 +116,7 @@ Equivalentemente: **todo subconjunto LI de $V$ tiene a lo sumo $n$ elementos**.
 ### I. Teorema 13 — la dimensión está bien definida
 $$\text{Si } V \text{ tiene una base con } n \text{ elementos, toda base de } V \text{ tiene } n \text{ elementos}$$
 
-$$\dim V=n \quad (\text{número de elementos de cualquier base})$$
+$$\dim V=\vert\mathcal{B}\vert \quad \text{numero de elementos de cualquier base}$$
 
 **🔤 Diccionario:** $\dim V$ dimensión · $n$ cardinal común de todas las bases · no depende de la base elegida · $\dim\{0\}=0$ · $\dim P=\infty$.
 
@@ -124,7 +124,7 @@ $$\dim V=n \quad (\text{número de elementos de cualquier base})$$
 
 ## 🔄 3. REGLAS DE ORO / CASOS ESPECIALES
 
-- **Caso 0 — Orden en el Teorema 7.3:** la lista se puede reordenar. Si $v_1=0$, muévelo al final; el teorema exige $v_1\ne0$.
+- **Caso 0 — Orden en el Teorema 7.3:** la lista se puede reordenar. Si $v_1=0$, muévelo al final y pon al frente otro vector no nulo; el teorema exige $v_1\ne0$.
 - **Caso 1 — Un solo vector:** $\{v\}$ es LD $\iff v=\vec0$. Un vector no nulo siempre es LI.
 - **Caso 2 — Dos vectores:** LD $\iff$ uno es múltiplo del otro. Tres o más: hay que resolver el sistema.
 - **Caso 3 — Atajo de dimensión:** si $\dim V=n$ y tengo $n$ vectores, **basta una** condición: LI $\Rightarrow$ base; generan $\Rightarrow$ base. ➕ (justificado por Teoremas 12 y 13)
@@ -157,10 +157,10 @@ $$\gamma=1\ \Rightarrow\ \alpha=-2,\ \beta=-3\ \text{es solución no trivial}\ \
 
 **Plantilla** (misma lista anterior):
 $$v_3=(2,3,0)=2(1,0,0)+3(0,1,0)=2v_1+3v_2$$
-$$\Rightarrow\ v_3\in\operatorname{Gen}\{v_1,v_2\}\ \Rightarrow\ \text{la lista es LD (Teorema 7.3)}$$
+$$\Rightarrow\ v_3\in\operatorname{Gen}\{v_1,v_2\}\ \Rightarrow\ \text{la lista es LD por el Teorema 7.3}$$
 
 ### 4.3 Probar que $\mathcal{B}$ es base (las 2 condiciones)
-1. Verificar LI: plantear $\sum c_ip_i=0$ y mostrar $c_i=0$.
+1. Verificar LI: plantear $\sum c_iv_i=0_V$ y mostrar $c_i=0$.
 2. Verificar que genera: dado un elemento genérico, despejar los coeficientes.
 3. Concluir base y leer su dimensión.
 
@@ -179,7 +179,7 @@ $$\Rightarrow\ \mathcal{B}\ \text{es base de } P_2,\qquad \dim P_2=3$$
 **Plantilla** ($S_1=\{1+x,\ -1+x,\ 2x\}$ y $S_2=\{1+x,\ -1+x\}$ en $P_2$):
 $$(1+x)+(-1+x)-(2x)=0\quad\text{con coeficientes }(1,1,-1)\ne(0,0,0)\ \Rightarrow\ S_1\ \text{es LD}$$
 $$\alpha(1+x)+\beta(-1+x)=(\alpha-\beta)+(\alpha+\beta)x\ \text{tiene grado}\le1\ \Rightarrow\ x^2\notin\operatorname{Gen}S_2$$
-$$\Rightarrow\ S_1\ \text{no es base (LD)},\qquad S_2\ \text{no es base (no genera)}$$
+$$\Rightarrow\ S_1\ \text{no es base por ser LD},\qquad S_2\ \text{no es base porque no genera}$$
 
 ### 4.5 Usar Steinitz para acotar vectores
 1. Contar los generadores $n$ de $V$.
@@ -189,7 +189,7 @@ $$\Rightarrow\ S_1\ \text{no es base (LD)},\qquad S_2\ \text{no es base (no gene
 
 **Plantilla** ($V=\mathbb{R}^2=\operatorname{Gen}\{(1,0),(0,1)\}$, $n=2$; $S=\{(1,0),(0,1),(1,1)\}$):
 $$\vert S\vert=3>2=n\ \Rightarrow\ S\ \text{es LD}$$
-$$(1,1)=(1,0)+(0,1)\quad\text{(verificación del contraejemplo)}$$
+$$(1,1)=(1,0)+(0,1)\quad\text{verifico el contraejemplo}$$
 
 ### 4.6 Probar que al agregar un vector fuera del generado sigue LI (Teorema 9.2)
 1. Suponer $\alpha_1v_1+\dots+\alpha_nv_n+\gamma v=0$ con $v\notin\operatorname{Gen}S$.
@@ -198,7 +198,7 @@ $$(1,1)=(1,0)+(0,1)\quad\text{(verificación del contraejemplo)}$$
 4. Concluir que $S\cup\{v\}$ es LI.
 
 **Plantilla** ($S=\{(1,0,0),(0,1,0)\}$ en $\mathbb{R}^3$, $v=(0,0,1)$):
-$$\gamma\ne0\ \Rightarrow\ v=-\frac{\alpha_1}{\gamma}v_1-\frac{\alpha_2}{\gamma}v_2\in\operatorname{Gen}S\quad\text{(contradice } v\notin\operatorname{Gen}S\text{)}$$
+$$\gamma\ne0\ \Rightarrow\ v=-\frac{\alpha_1}{\gamma}v_1-\frac{\alpha_2}{\gamma}v_2\in\operatorname{Gen}S\quad\text{contradiccion}$$
 $$\gamma=0\ \Rightarrow\ \alpha_1v_1+\alpha_2v_2=0\ \Rightarrow\ \alpha_1=\alpha_2=0\ \Rightarrow\ S\cup\{v\}\ \text{es LI}$$
 
 ---
