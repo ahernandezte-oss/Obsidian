@@ -4,3 +4,7 @@
 .obsidian/plugins/git-sync
 .trash/
 .DS_Store
+# --- configuracion personal, NUNCA al repo compartido ---
+.obsidian/plugins/*/data.json
+PROMPT_*.md
+CEDO/PROMPT_*.md
