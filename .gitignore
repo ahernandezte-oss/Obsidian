@@ -8,3 +8,6 @@
 .obsidian/plugins/*/data.json
 PROMPT_*.md
 CEDO/PROMPT_*.md
+# --- en CONJUNTOS el repo lleva SOLO cheatsheets (reglas de trabajo fuera) ---
+CONJUNTOS/AGENTS.md
+CONJUNTOS/PREFERENCIAS.md
