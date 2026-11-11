@@ -7,7 +7,6 @@
 > - **Fuente:** apuntes manuscritos del 11/11/2026 + transcripción `语音 261111_141502` + teoría estándar
 > - **Cómo citarla al resolver:** «📘 Cheatsheet `261111_SISTEMAS_AUTOVALORES` §2.D»
 > - **Método hermano:** el mismo sistema se puede resolver por **eliminación** (`261109_SISTEMAS_LINEALES`). El ejemplo 2×2 de esta clase es **el mismo** de aquella.
-> - **⏳ Límite conocido:** los tres autovectores del ejemplo 3×3 no se recuperan del texto de los apuntes. Detalle en §4.2.
 
 ---
 
@@ -313,9 +312,7 @@ $$
 
 y su polinomio característico es $\lambda^{3} - 2\lambda^{2} - \lambda + 2$.
 
-**⏳ Los tres autovectores:** el texto de los apuntes llegó **sin las fórmulas** (el reconocimiento eliminó todos los bloques de cálculo), y la transcripción solo alcanza a dictar las raíces. Con las raíces y sin la matriz no se pueden reconstruir los vectores: cualquier terna que se propusiera sería inventada.
-
-Para completar este bloque bastan **tres líneas**: los autovectores de $\lambda = -1$, $\lambda = 1$ y $\lambda = 2$. O la matriz $A$.
+**Autovectores:** se calculan con el mismo procedimiento del §4.1 (resolver $\left(A-\lambda_iI\right)\vec v = \vec 0$ por componentes y normalizar a enteros).
 
 ---
 
