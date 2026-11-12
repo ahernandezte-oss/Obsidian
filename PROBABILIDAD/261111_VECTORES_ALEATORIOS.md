@@ -4,6 +4,7 @@
 > - **Archivo:** `261111_VECTORES_ALEATORIOS.md`
 > - **Fecha de transcripción:** 11/11/2026 (`AAMMDD` = `261111`)
 > - **Tema principal:** VECTORES ALEATORIOS — conjuntamente discretos y conjuntamente continuos · f.p.m.c. conjunta · f.d.a.c. conjunta · marginales · densidades marginales · independencia
+> - **Formato de las plantillas:** **cadena de igualdades** — un renglón por paso, cada renglón con su justificación entre paréntesis (§4.0).
 > - **Fuentes:** transcripción de clase + apuntes del estudiante. Complementos teóricos marcados con `➕` (Liliana Blanco, *Probabilidad*, cap. 5).
 > - **Continuidad:** abre el capítulo de vectores. Viene de `261109_NORMAL_Y_APROX_BINOMIAL` (una sola variable, cerrado).
 > - **Cómo citarla al resolver ejercicios:** «📘 Cheatsheet `261111_VECTORES_ALEATORIOS` §2.E».
@@ -266,6 +267,24 @@ $$
 
 ## 🚀 4. ALGORITMOS DE RESOLUCIÓN
 
+### 📏 4.0 Protocolo de escritura: la cadena
+
+Toda cuenta se escribe como **cadena de igualdades**:
+
+1. **Una igualdad por renglón.** El primero enuncia la cantidad; los demás empiezan con `=`.
+2. **Cada renglón lleva su justificación** entre paréntesis: qué definición, propiedad o cuenta se aplicó.
+3. **No se salta ningún paso**: suma, primitiva, evaluación y simplificación se ven escritas.
+4. **El último renglón es el resultado** (con decimal si aplica).
+5. Los pasos 1-2-3 del algoritmo son la **lista de renglones**; la cadena es su ejecución.
+
+**Patrón mínimo:**
+$$
+\begin{aligned}
+2^{3} &= 8 && \text{(evaluar la potencia)}\\
+&= 2(4) && \text{(factorizar: }8=2\cdot4\text{)}
+\end{aligned}
+$$
+
 ### 🎲 A. Construir la tabla conjunta (discreto)
 
 1. **Describe** $\Omega$ y asigna $P$ a cada resultado (equiprobable si el experimento es regular).
@@ -283,7 +302,14 @@ $$
 | $2$ | $0$ | $\frac18$ | $\frac18$ | $\frac14$ |
 | $p_Y(y)$ | $\frac14$ | $\frac12$ | $\frac14$ | $1$ |
 
-Celda $\frac14$: dos tríos favorables, $(C,S,C)$ y $(S,C,S)$ → $\frac{2}{8}$.
+**Cadena de la celda que vale $\frac14$:**
+$$
+\begin{aligned}
+p(1,1) &= P\big(\{(C,S,C),(S,C,S)\}\big) && \text{(casos con }X=1,\ Y=1\text{)}\\
+&= \frac{2}{8} && \text{(2 tríos de 8 equiprobables)}\\
+&= \frac14 && \text{(simplificar)}
+\end{aligned}
+$$
 
 ---
 
@@ -294,7 +320,23 @@ Celda $\frac14$: dos tríos favorables, $(C,S,C)$ y $(S,C,S)$ → $\frac{2}{8}$.
 3. **Suma** y escribe el resultado en la última columna (o fila).
 4. **Verifica:** la suma de las marginales debe dar $1$.
 
-**Plantilla:** $p_X(0)=\frac18+\frac18+0=\frac14$; $p_Y(1)=\frac18+\frac14+\frac18=\frac12$.
+**Plantilla:**
+$$
+\begin{aligned}
+p_X(0) &= p(0,0)+p(0,1)+p(0,2) && \text{(fila }x=0\text{ de la tabla)}\\
+&= \frac18+\frac18+0 && \text{(leer la tabla)}\\
+&= \frac{2}{8} && \text{(sumar)}\\
+&= \frac14 && \text{(simplificar)}
+\end{aligned}
+$$
+$$
+\begin{aligned}
+p_Y(1) &= p(0,1)+p(1,1)+p(2,1) && \text{(columna }y=1\text{)}\\
+&= \frac18+\frac14+\frac18 && \text{(leer la tabla)}\\
+&= \frac{4}{8} && \text{(sumar)}\\
+&= \frac12 && \text{(simplificar)}
+\end{aligned}
+$$
 
 ---
 
@@ -315,7 +357,21 @@ Celda $\frac14$: dos tríos favorables, $(C,S,C)$ y $(S,C,S)$ → $\frac{2}{8}$.
 | $1\le x<2$ | $0$ | $\frac14$ | $\frac58$ | $\frac34$ |
 | $x\ge2$ | $0$ | $\frac14$ | $\frac34$ | $1$ |
 
-Ejemplo de lectura: $P\left(X\le\frac34,\ Y\le\frac13\right)=F\left(\frac34,\frac13\right)=\frac18$ porque $\frac34\in[0,1)$ y $\frac13\in[0,1)$.
+**Plantilla de lectura y de rectángulo:**
+$$
+\begin{aligned}
+F\left(\tfrac34,\tfrac13\right) &= P\left(X\le\tfrac34,\ Y\le\tfrac13\right) && \text{(definición de }F\text{)}\\
+&= p(0,0) && \text{(solo }x=0,\ y=0\text{ cumplen)}\\
+&= \frac18 && \text{(leer la tabla)}
+\end{aligned}
+$$
+$$
+\begin{aligned}
+P(1<X\le2,\ 0<Y\le1) &= F(2,1)-F(1,1)-F(2,0)+F(1,0) && \text{(fórmula }\Delta\text{)}\\
+&= \tfrac34-\tfrac58-\tfrac14+\tfrac14 && \text{(leer la tabla)}\\
+&= \tfrac18 && \text{(sumar)}
+\end{aligned}
+$$
 
 ---
 
@@ -329,10 +385,23 @@ Ejemplo de lectura: $P\left(X\le\frac34,\ Y\le\frac13\right)=F\left(\frac34,\fra
 
 **Plantilla:** $f(x,y)=6xy^{2}$ si $0<x<1,\ 0<y<1$; $0$ en otro caso.
 $$
-\int_0^1\!\!\int_0^1 6xy^{2}\,dy\,dx=\int_0^1 6x\left[\frac{y^{3}}{3}\right]_0^1dx=\int_0^1 2x\,dx=\left[x^{2}\right]_0^1=1\ \checkmark
+\begin{aligned}
+\int_0^1\!\!\int_0^1 6xy^{2}\,dy\,dx &= \int_0^1 6x\left[\frac{y^{3}}{3}\right]_{0}^{1}dx && \text{(integrar en }y\text{)}\\
+&= \int_0^1 6x\cdot\frac13\,dx && \text{(evaluar }y=1,\ y=0\text{)}\\
+&= \int_0^1 2x\,dx && \text{(simplificar)}\\
+&= \left[x^{2}\right]_{0}^{1} && \text{(primitiva en }x\text{)}\\
+&= 1 && \text{(evaluar)}\ \checkmark
+\end{aligned}
 $$
 $$
-P\left(\tfrac12<X\le\tfrac34,\ 0<Y\le\tfrac13\right)=\int_{1/2}^{3/4}\!\!\int_0^{1/3}6xy^{2}\,dy\,dx=\frac{15}{16}\cdot\frac{1}{81}=\frac{5}{432}\approx0{,}01157
+\begin{aligned}
+P\left(\tfrac12<X\le\tfrac34,\ 0<Y\le\tfrac13\right) &= \int_{1/2}^{3/4}\!\!\int_{0}^{1/3}6xy^{2}\,dy\,dx && \text{(integrar }f\text{ sobre }C\text{)}\\
+&= \left(\int_{1/2}^{3/4}6x\,dx\right)\left(\int_{0}^{1/3}y^{2}\,dy\right) && \text{(el integrando factoriza)}\\
+&= \left(3\left[\tfrac{9}{16}-\tfrac{4}{16}\right]\right)\left(\tfrac{1}{81}\right) && \text{(primitivas y extremos)}\\
+&= \frac{15}{16}\cdot\frac{1}{81} && \text{(simplificar)}\\
+&= \frac{5}{432} && \text{(multiplicar)}\\
+&\approx 0{,}01157 && \text{(decimal)}
+\end{aligned}
 $$
 
 ---
@@ -346,13 +415,28 @@ $$
 
 **Plantilla (misma $f=6xy^{2}$):**
 $$
-f_X(x)=\int_0^1 6xy^{2}\,dy=6x\left[\frac{y^{3}}{3}\right]_0^1=2x,\quad 0<x<1
+\begin{aligned}
+f_X(x) &= \int_{0}^{1} 6xy^{2}\,dy && \text{(definición de marginal)}\\
+&= 6x\left[\frac{y^{3}}{3}\right]_{0}^{1} && \text{(primitiva en }y\text{)}\\
+&= 6x\cdot\frac13 && \text{(evaluar }y=1,\ y=0\text{)}\\
+&= 2x,\qquad 0<x<1 && \text{(simplificar y anotar soporte)}
+\end{aligned}
 $$
 $$
-f_Y(y)=\int_0^1 6xy^{2}\,dx=6y^{2}\left[\frac{x^{2}}{2}\right]_0^1=3y^{2},\quad 0<y<1
+\begin{aligned}
+f_Y(y) &= \int_{0}^{1} 6xy^{2}\,dx && \text{(definición de marginal)}\\
+&= 6y^{2}\left[\frac{x^{2}}{2}\right]_{0}^{1} && \text{(primitiva en }x\text{)}\\
+&= 6y^{2}\cdot\frac12 && \text{(evaluar)}\\
+&= 3y^{2},\qquad 0<y<1 && \text{(simplificar y anotar soporte)}
+\end{aligned}
 $$
 $$
-P\left(\tfrac12<X\le\tfrac34\right)=\int_{1/2}^{3/4}2x\,dx=\left[x^{2}\right]_{1/2}^{3/4}=\frac{9}{16}-\frac{4}{16}=\frac{5}{16}=0{,}3125
+\begin{aligned}
+P\left(\tfrac12<X\le\tfrac34\right) &= \int_{1/2}^{3/4}2x\,dx && \text{(integrar }f_X\text{ sobre el intervalo)}\\
+&= \left[x^{2}\right]_{1/2}^{3/4} && \text{(primitiva)}\\
+&= \frac{9}{16}-\frac{4}{16} && \text{(evaluar extremos)}\\
+&= \frac{5}{16}=0{,}3125 && \text{(restar)}
+\end{aligned}
 $$
 
 ---
@@ -365,12 +449,26 @@ $$
 
 **Plantilla ($f=6xy^{2}$ en $(0,1)^2$):** para $0\le x<1,\ 0\le y<1$,
 $$
-F(x,y)=\int_0^x\!\!\int_0^y 6uv^{2}\,dv\,du=x^{2}y^{3}
+\begin{aligned}
+F(x,y) &= \int_{0}^{x}\!\!\int_{0}^{y} 6uv^{2}\,dv\,du && \text{(definición de }F\text{)}\\
+&= \int_{0}^{x} 6u\left[\frac{v^{3}}{3}\right]_{0}^{y}du && \text{(integrar en }v\text{)}\\
+&= \int_{0}^{x} 2uy^{3}\,du && \text{(evaluar }v=y,\ v=0\text{)}\\
+&= y^{3}\left[u^{2}\right]_{0}^{x} && \text{(primitiva en }u\text{)}\\
+&= x^{2}y^{3} && \text{(evaluar)}
+\end{aligned}
 $$
 $$
 F(x,y)=\begin{cases}0 & x<0\ \text{o}\ y<0\\ x^{2}y^{3} & 0\le x<1,\ 0\le y<1\\ y^{3} & x\ge1,\ 0\le y<1\\ x^{2} & 0\le x<1,\ y\ge1\\ 1 & x\ge1,\ y\ge1\end{cases}
 $$
-Y al revés: $\frac{\partial^2}{\partial x\,\partial y}\left(x^{2}y^{3}\right)=6xy^{2}=f(x,y)$. $\checkmark$
+**Y al revés (de $F$ a $f$):**
+$$
+\begin{aligned}
+\frac{\partial F}{\partial x} &= \frac{\partial}{\partial x}\left(x^{2}y^{3}\right) && \text{(derivar en }x\text{)}\\
+&= 2xy^{3} && \text{(bajar el exponente)}\\
+\frac{\partial^{2}F}{\partial x\,\partial y} &= \frac{\partial}{\partial y}\left(2xy^{3}\right) && \text{(derivar en }y\text{)}\\
+&= 6xy^{2}=f(x,y) && \text{(TFC)}\ \checkmark
+\end{aligned}
+$$
 
 ---
 
@@ -382,7 +480,15 @@ Y al revés: $\frac{\partial^2}{\partial x\,\partial y}\left(x^{2}y^{3}\right)=6
 4. **Revisa el soporte:** si no es un rectángulo, son dependientes aunque factorice.
 5. **Decide:** iguales en todo el soporte → independientes; un solo punto donde falle → dependientes.
 
-**Plantilla:** $f(x,y)=6xy^{2}=(2x)(3y^{2})=f_X(x)f_Y(y)$ en $(0,1)^2$ (rectángulo) → **independientes**. Por eso $P\left(\frac12<X\le\frac34\mid Y>\frac12\right)=P\left(\frac12<X\le\frac34\right)=\frac{5}{16}$.
+**Plantilla:**
+$$
+\begin{aligned}
+f_X(x)f_Y(y) &= (2x)\left(3y^{2}\right) && \text{(marginales de §4.E)}\\
+&= 6xy^{2} && \text{(multiplicar)}\\
+&= f(x,y) && \text{(coincide en todo }(0,1)^2\text{)}
+\end{aligned}
+$$
+El soporte es el rectángulo $(0,1)\times(0,1)$ → **independientes**. Por eso $P\left(\frac12<X\le\frac34\mid Y>\frac12\right)=P\left(\frac12<X\le\frac34\right)=\frac{5}{16}$.
 
 ---
 
@@ -394,12 +500,23 @@ Y al revés: $\frac{\partial^2}{\partial x\,\partial y}\left(x^{2}y^{3}\right)=6
 4. **Divide** y verifica $0\le P\le1$.
 5. **Atajo:** si son independientes, $P(A\mid B)=P(A)$; no hace falta integrar.
 
-**Plantilla:** $P\left(\frac12<X\le\frac34\ \mid\ Y>\frac12\right)$ con $f=6xy^{2}$.
+**Plantilla:** $P\left(\frac12<X\le\frac34\ \mid\ Y>\frac12\right)$ con $f=6xy^{2}$. Primero el denominador:
 $$
-P(A\cap B)=\frac{5}{16}\cdot\frac78=\frac{35}{128},\qquad P(B)=P\left(Y>\tfrac12\right)=\int_{1/2}^{1}3y^{2}\,dy=\frac78
+\begin{aligned}
+P\left(Y>\tfrac12\right) &= \int_{1/2}^{1} 3y^{2}\,dy && \text{(integrar }f_Y\text{)}\\
+&= \left[y^{3}\right]_{1/2}^{1} && \text{(primitiva)}\\
+&= 1-\frac{1}{8} && \text{(evaluar extremos)}\\
+&= \frac78 && \text{(restar)}
+\end{aligned}
 $$
+Ahora la cadena completa:
 $$
-P(A\mid B)=\frac{35/128}{7/8}=\frac{5}{16}=0{,}3125
+\begin{aligned}
+P\left(\tfrac12<X\le\tfrac34\ \mid\ Y>\tfrac12\right) &= \frac{P\left(\tfrac12<X\le\tfrac34,\ Y>\tfrac12\right)}{P\left(Y>\tfrac12\right)} && \text{(definición de condicional)}\\
+&= \frac{\frac{5}{16}\cdot\frac78}{\frac78} && \text{(independencia: }P(A\cap B)=P(A)P(B)\text{)}\\
+&= \frac{35/128}{7/8} && \text{(multiplicar)}\\
+&= \frac{5}{16}=0{,}3125 && \text{(dividir)}
+\end{aligned}
 $$
 
 ---
@@ -413,4 +530,5 @@ $$
 - [ ] ¿Confundí $F(x,y)$ con $p(x,y)$ o con $f(x,y)$?
 - [ ] ¿Usé $\Delta_a^bF$ para un rectángulo en vez de restar cuatro números a mano?
 - [ ] Si pedían independencia: ¿comparé en **todo** el soporte y revisé que sea rectangular?
+- [ ] ¿Escribí la cuenta como **cadena** (un paso por renglón) y cada renglón con su justificación?
 - [ ] ¿El resultado está en $[0,1]$ y es coherente con el dibujo de la región?
