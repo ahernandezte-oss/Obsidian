@@ -214,7 +214,7 @@ Es decir: los ordinales son los **representantes canónicos** de los tipos de or
 | # | Propiedad | Idea de la prueba |
 |---|---|---|
 | 1 | $\alpha\notin\alpha$ | $\in$ es irreflexivo en $\alpha$ |
-| 2 | $\beta\in\alpha\ \Rightarrow\ \beta$ es ordinal | $\beta\subseteq\alpha$ y $\in$ se hereda a subconjuntos |
+| 2 | $\beta\in\alpha\ \Rightarrow\ \beta$ es ordinal | $\beta\subseteq\alpha$; si $\gamma\in\delta\in\beta$, entonces $\gamma\in\alpha$ y $\gamma\in\beta$ (transitividad de $\in$ en $\alpha$); el buen orden se hereda a $\beta$ |
 | 3 | $\alpha$ ordinal $\Rightarrow\ \alpha+1$ ordinal | $\alpha+1$ es transitivo y es la yuxtaposición $\alpha\oplus\{\alpha\}$ |
 | 4 | $\beta\in\alpha\ \Rightarrow\ \alpha_{<\beta}=\beta$ | $\beta$ es transitivo y $\beta\subseteq\alpha$ |
 | 5 | $\alpha\in\beta\ \Rightarrow\ \alpha\subsetneq\beta$ | transitividad de $\beta$, y $\alpha\neq\beta$ porque $\alpha\notin\alpha$ |
