@@ -151,6 +151,7 @@ $$
 | $C e^{ax}\cos(bx)$ o $C e^{ax}\sin(bx)$ | $\{e^{ax}\cos bx, e^{ax}\sin bx\}$ | $e^{ax}\left(A\cos bx + B\sin bx\right)$ | $a + bi$ |
 | $x^ne^{ax}$ | $\{x^ne^{ax}, \ldots, x e^{ax}, e^{ax}\}$ | $\left(A_nx^n + \cdots + A_0\right)e^{ax}$ | $a$ |
 | $x^n\cos(bx)$ o $x^n\sin(bx)$ | $\{x^n\cos bx, \ldots, \cos bx, \sin bx\}$ | $\left(A_nx^n + \cdots + A_0\right)\cos bx + \left(B_nx^n + \cdots + B_0\right)\sin bx$ | $bi$ |
+| $C\cosh(ax)$ o $C\sinh(ax)$ | $\textbf{no es una familia propia}$: se convierte a exponenciales | $\dfrac{C}{2}\left(e^{ax} \pm e^{-ax}\right)$ → **dos bloques** $Ae^{ax} + Be^{-ax}$ | $a$ y $-a$ (uno por bloque) |
 
 **Reglas de combinación:** producto de términos → **multiplicar** conjeturas · suma de términos → **sumar** conjeturas · **producto de senos y cosenos de frecuencias distintas → primero convertir a suma** (ver abajo).
 
@@ -171,6 +172,15 @@ $$
 **Por qué son obligatorias:** la familia de $\sin 3x\cos 2x$ **no** es $\{x\text{-trig}\}$ ni el producto de dos familias de 2 elementos (eso daría 8 funciones mal organizadas); es la suma de las familias de $\sin 5x$ y de $\sin x$. Si no se convierten, la conjetura de $y_p$ no cubre $g(x)$ y el sistema no tiene solución.
 
 ⚠️ **Estas identidades no se aplican** a productos donde uno de los factores es $x^n$ o $e^{ax}$ (esos sí se resuelven con la fila correspondiente de la tabla): se aplican solo entre senos y cosenos.
+
+
+**⚠️ Hiperbólicas:** $\cosh$ y $\sinh$ **no se tratan como familia aparte**. Se convierten primero, porque son combinaciones de exponenciales:
+
+$$
+\cosh(ax) = \frac{e^{ax} + e^{-ax}}{2}, \qquad \sinh(ax) = \frac{e^{ax} - e^{-ax}}{2}
+$$
+
+Cada exponencial resultante se prueba por separado con su $\lambda_0 = a$ y $\lambda_0 = -a$.
 
 **Pasos (regla del conjunto):**
 1. **Normaliza $g(x)$**: desarrolla paréntesis y convierte todo producto $\sin\cdot\cos$ a suma.
