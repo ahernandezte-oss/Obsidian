@@ -182,6 +182,12 @@ $$
 
 Cada exponencial resultante se prueba por separado con su $\lambda_0 = a$ y $\lambda_0 = -a$.
 
+**⚠️ Potencias fraccionarias** ($x^{1/3}$, $\sqrt{x}$, $x^{3/2}$…): no están en la tabla. Si $g$ es un **binomio de potencias que difieren en 1**, se prueba **un solo monomio**:
+
+$$
+g = c_1x^{r} + c_2x^{r+1} \;\Longrightarrow\; y_p = ax^{r+2}$$
+porque al derivar, $y_p'$ aporta $x^{r+1}$ y $y_p''$ aporta $x^{r}$. Si las potencias **no** difieren en 1, o hay más de dos, se va a variación de parámetros.
+
 **Pasos (regla del conjunto):**
 1. **Normaliza $g(x)$**: desarrolla paréntesis y convierte todo producto $\sin\cdot\cos$ a suma.
 2. Localiza cada término en la tabla y anota **su familia y su $\lambda_0$**.
