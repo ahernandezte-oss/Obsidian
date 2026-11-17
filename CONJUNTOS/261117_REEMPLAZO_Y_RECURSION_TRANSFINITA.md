@@ -51,6 +51,31 @@
 
 ## 🛠️ 2. CAJA DE HERRAMIENTAS
 
+### 0. Definiciones para desenvolver (qué probar con cada una)
+
+> Antes de las herramientas: cada término del tema, **desenvuelto**. La columna 3 quita las abreviaturas; la 4 es la lista de chequeo cuando el parcial dice «pruebe que…» o «use que…».
+
+| Término | Definición (📘) | Se desenvuelve como | Para usarla hay que probar |
+|---|---|---|---|
+| **Propiedad funcional** | §2.A | $(\forall x)(\exists!\,y)\,\varphi(x,y)$ | que para **cada** $x$ existe $y$ **y** es único |
+| **Reemplazo (imagen)** | §2.A | $(\exists B)(\forall y)\left(y\in B\iff(\exists x\in A)\,\varphi(x,y)\right)$ | que $\varphi$ sea funcional en $A$; después identificar $B$ |
+| **Buen orden** | `261112` §2.A | total $+$ $(\forall S\subseteq A)\left(S\neq\emptyset\Rightarrow(\exists m\in S)(\forall s\in S)(m\le s)\right)$ | exhibir el mínimo de **cada** subconjunto no vacío |
+| **$\varphi$-recursión** | §2.C | $\operatorname{dom}F=A\ \wedge\ (\forall a\in A)\,\varphi\left(F\restriction A_{<a},F(a)\right)$ | (i) $F$ es función con dominio $A$; (ii) la condición en **cada** $a$ |
+| **Ordinal** | `261112` §2.C | transitivo $+$ $(\alpha,\in)$ buen orden estricto | (i) $(\forall x\in\alpha)(x\subseteq\alpha)$; (ii) irreflexivo, transitivo, tricotómico y mínimo en cada no vacío |
+| **Norma** | §2.B | el único $\alpha$ con $(A,<)\cong(\alpha,\in)$ | existencia (reemplazo $+$ comparabilidad) **y** unicidad |
+| **Funcional sobre $\mathbf{Ord}$** | §2.F | $\sigma(\alpha)$ definido por niveles, con $\sigma\restriction\lambda=G_{\lambda}$ | que cada restricción es la recursión local |
+
+**Ejemplo de desenvolvimiento: «$F$ es $\varphi$-recursión en $A$».** No significa «$F(a)$ depende de $F(a-1)$». Significa exactamente:
+
+1. $F$ es una función y $\operatorname{dom}F=A$.
+2. $(\forall a\in A)$ el par $\left(F\restriction A_{<a},\,F(a)\right)$ cumple $\varphi$.
+
+Para usarla hay que exhibir (1) y (2). **No** hay que probar que $a$ tenga antecesor: el insumo es **todo** el segmento $A_{<a}$.
+
+> **🔤 Diccionario:** $A_{<a}=\{x\in A:x<a\}$; $F\restriction B$ = restricción de $F$ a $B$; $\exists!$ = «existe exactamente uno».
+
+---
+
 ### A. Axioma de reemplazo y sus consecuencias
 
 $$
