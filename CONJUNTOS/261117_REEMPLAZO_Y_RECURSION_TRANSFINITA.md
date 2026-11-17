@@ -60,9 +60,11 @@ P(a,b)\ \text{es funcional}
 $$
 
 $$
-\text{Reemplazo:}\qquad
-\forall\,A\ \exists\,B\ \forall\,a\in A\ \exists\,b\in B:\ P(a,b)
+\text{Reemplazo (forma de imagen):}\qquad
+(\forall A)\left[\left((\forall a\in A)(\exists!\,b)\,P(a,b)\right)\ \Longrightarrow\ (\exists B)(\forall y)\left(y\in B\iff(\exists a\in A)\,P(a,y)\right)\right]
 $$
+
+> ⚠️ **Forma débil (no usar para separación).** La versión «existe $B$ tal que $(\forall a\in A)(\exists b\in B)\,P(a,b)$» solo dice que $B$ **contiene** las imágenes; con ella no se puede probar que $B$ sea exactamente el conjunto buscado. La forma de **imagen** es la que se usa en todo el tema (y la que exige el ejercicio de separación).
 
 **Lo que se deriva** (➕: la clase lo discute; aquí queda cerrado):
 
