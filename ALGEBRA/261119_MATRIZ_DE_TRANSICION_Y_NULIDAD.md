@@ -97,7 +97,7 @@ entonces $\{w_1,\dots,w_k\}$ es base de $\nu(A)$ y $k=\operatorname{nulidad}(A)$
 ## 🔄 3. REGLAS DE ORO / CASOS ESPECIALES
 
 - **Caso 0 — Dirección de $P$:** $P$ va **de $\mathcal{B}$ a $\mathcal{B}'$** y sus columnas están en $\mathcal{B}'$. Al revés es $P^{-1}$ (Cor 21).
-- **Caso 1 — Base estándar:** si $\mathcal{B}$ es la estándar, $[v]_{\mathcal{B}}=v$ y $P$ se arma directo con los vectores de $\mathcal{B}'$ (o $P=M_{\mathcal{B}'}^{-1}$).
+- **Caso 1 — Base estándar:** si $\mathcal{B}$ es la estándar, $[v]_{\mathcal{B}}=v$ y $P=M_{\mathcal{B}'}^{-1}$ (las columnas de $P$ son $[e_i]_{\mathcal{B}'}$).
 - **Caso 2 — Orden:** cambiar el orden de una base cambia $P$ y las coordenadas.
 - **Caso 3 — $P$ invertible:** siempre, porque sus columnas son coordenadas de una base; si al calcularla no es invertible, hay error.
 - **Caso 4 — Verificación:** $P[v]_{\mathcal{B}}$ debe dar $[v]_{\mathcal{B}'}$ y $P^{-1}[v]_{\mathcal{B}'}$ debe devolver $[v]_{\mathcal{B}}$.
